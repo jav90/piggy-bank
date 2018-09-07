@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "../node_modules/react-bootstrap/lib"
 import Wrapper from "./components/Wrapper";
+import {DailyComponent, WeeklyComponent} from "./components/diary";
 
 const App = () => ( 
   <Router>
@@ -21,6 +22,8 @@ const App = () => (
         <Route exact path="/settings" component={Settings} />
       </Wrapper>
       <Footer />
+      <DailyComponent/>
+      <WeeklyComponent/>
     </div>
   </Router>
 );
