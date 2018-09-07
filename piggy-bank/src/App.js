@@ -6,6 +6,7 @@ import Profile from "./containers/profile";
 import Settings from "./containers/settings";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "../node_modules/react-bootstrap/lib"
 import Wrapper from "./components/Wrapper";
 
 const App = () => ( 
