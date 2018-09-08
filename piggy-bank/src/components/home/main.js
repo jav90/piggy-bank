@@ -43,7 +43,7 @@ const Main = props => (
                     <h1>Welcome, Testname</h1>
                     <div className="home-pigu">
 
-                    <img src={ require('./assets/images/green-pigu.png') } />
+                    <img src="#" />
                     </div>
                 
                 </div>
