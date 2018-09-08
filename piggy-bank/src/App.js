@@ -22,8 +22,6 @@ const App = () => (
         <Route exact path="/settings" component={Settings} />
       </Wrapper>
       <Footer />
-      <DailyComponent/>
-      <WeeklyComponent/>
     </div>
   </Router>
 );
