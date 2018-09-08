@@ -1,5 +1,5 @@
-import React from 'react';
-import {Doughnut} from 'react-chartjs-2';
+import React, { Component } from 'react';
+import {Doughnut} from 'react-chartjs';
 
 const data = {
 	labels: [
@@ -23,34 +23,18 @@ const data = {
 };
 
 
-export default React.createClass({
-  displayName: 'DoughnutExample',
 
+
+
+export class main extends Component {
   render() {
     return (
       <div>
-        <h2>Doughnut Example</h2>
-        <Doughnut data={data} />
+          <h1>HELLO</h1>
+      <Doughnut data={data} />
       </div>
-    );
+    )
   }
-});
+}
 
-const Main = props => (
-    <div>
-        <div className="card text-center">
-                <div className="card-header">
-                    <h1>Welcome, Testname</h1>
-                    <div className="home-pigu">
-
-                    <img src="#" />
-                    </div>
-                
-                </div>
-            <div className="card-body">{props.name}</div>
-        </div>
-    </div>
-  );
-  
-  export default Main;
-  
+export default main
