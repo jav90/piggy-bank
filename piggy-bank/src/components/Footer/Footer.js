@@ -1,24 +1,29 @@
 import React from 'react';
-import Navbar from "../../../node_modules/react-bootstrap/lib/Navbar"
-import Nav from "../../../node_modules/react-bootstrap/lib/Nav"
-import NavItem from "../../../node_modules/react-bootstrap/lib/NavItem"
+import '../Footer/Footer.css';
+import Navbar from "../../../node_modules/react-bootstrap/lib/Navbar";
+import Nav from "../../../node_modules/react-bootstrap/lib/Nav";
 
 const Footer = props => (
     <div>
       <Navbar fixedBottom>
-        <Nav bsStyle="tabs"
+        <Nav
           justified
-          activeKey={1}
           onSelect={key => this.handleSelect(key)}>
-          <NavItem eventKey={1}>
-            NavItem 1
-          </NavItem>
-          <NavItem eventKey={2}>
-            NavItem 2
-          </NavItem>
-          <NavItem eventKey={3}>
-            NavItem 3
-          </NavItem>
+          <a href="#">
+            <div className="col-xs-4 text-center">
+              1
+            </div>
+          </a>
+          <a href="#">
+            <div className="col-xs-4 text-center">
+              2
+            </div>
+          </a>
+          <a href="#">
+            <div className="col-xs-4 text-center">
+              3
+            </div>
+          </a>
         </Nav>
       </Navbar>
     </div>
