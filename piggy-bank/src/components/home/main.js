@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Doughnut} from 'react-chartjs';
+import {Doughnut} from 'react-chartjs-2';
 
 const data = {
 	labels: [
@@ -23,15 +23,11 @@ const data = {
 };
 
 
-
-
-
 export class main extends Component {
   render() {
     return (
       <div>
           <h1>HELLO</h1>
-      <Doughnut data={data} />
       </div>
     )
   }
