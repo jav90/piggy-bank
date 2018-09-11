@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Main from '../components/home/main'
+import Main from '../components/home/Main'
 
 class Home extends Component {
     state = {
