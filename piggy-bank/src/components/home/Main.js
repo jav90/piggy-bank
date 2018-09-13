@@ -23,7 +23,7 @@ const data = {
 };
 
 
-export class main extends Component {
+export class Main extends Component {
   render() {
     return (
       <div>
@@ -33,4 +33,4 @@ export class main extends Component {
   }
 }
 
-export default main
+export default Main;
