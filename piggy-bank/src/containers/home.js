@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Main from '../components/home/Main.js';
 import Chart from '../components/home/Chart.js';
-
+import '../index.css'
 
 class Home extends Component {
     constructor() {
@@ -34,7 +34,7 @@ class Home extends Component {
 
     render(){
         return(
-            <div>
+            <div className="home">
                 <Main name={this.state.ninja}/>
                 <Chart chartData={this.state.chartData} legendPosition="bottom" />
             </div>
