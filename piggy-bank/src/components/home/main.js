@@ -23,14 +23,15 @@ const data = {
 };
 
 
-export class main extends Component {
+export class Main extends Component {
   render() {
     return (
       <div>
           <h1>HELLO</h1>
+					<Doughnut data={data} />
       </div>
     )
   }
 }
 
-export default main
+export default Main
