@@ -6,9 +6,8 @@ import Profile from "./containers/profile";
 import Settings from "./containers/settings";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import "../node_modules/react-bootstrap/lib"
 import Wrapper from "./components/Wrapper";
-import {DailyComponent, WeeklyComponent} from "./components/diary";
+
 
 const App = () => ( 
   <Router>
@@ -18,10 +17,14 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/diary" component={Diary} />
-        <Route exact path="/profile" component={Profile} />
-        <Route exact path="/settings" component={Settings} />
+        { 
+        /*<Route exact path="/profile" component={Profile} />
+        <Route exact path="/settings" component={Settings} />*/
+        }
       </Wrapper>
-      <Footer />
+      { 
+    }
+    
     </div>
   </Router>
 );
