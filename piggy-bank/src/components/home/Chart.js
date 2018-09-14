@@ -14,8 +14,8 @@ constructor(props){
     }
 }
     static defaultProps={
-        displayTitle:true,
-        displayLegend: true,
+        displayTitle:false,
+        displayLegend: false,
         legendPosition:'center',
     }
 
@@ -23,7 +23,8 @@ constructor(props){
     render(){
         return(
             <div className="chart">
-            <Doughnut
+            <Doughnut 
+                
                 data={this.state.chartData}
                 options={{
                     title: {
@@ -34,8 +35,7 @@ constructor(props){
                     legend:{
                         display:this.props.displayLegend,
                         position:'right'
-                    }
-
+                    },
                 }}
                 />
             </div>

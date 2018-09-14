@@ -7,3 +7,8 @@ right: 36.79%;
 top: 32.39%;
 bottom: 27.04%;
 }
+
+.pigubackground{
+    background: linear-gradient(180deg, #EAF7F2 0%, #EAF7F2 31.49%, #B7F0D9 56.35%, #7BE8BC 70.17%, #4DE2A6 84.53%, #0EDA87 100%);
+opacity: 0.5;
+}
