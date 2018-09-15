@@ -1,3 +1,13 @@
 nav.navbar.navbar-default {
   margin-bottom: 0;
 }
+
+.set-btn{
+  
+  position: absolute;
+  width: 35px;
+  height: 36px;
+  left: 294px;
+  top: 12px;
+  
+}

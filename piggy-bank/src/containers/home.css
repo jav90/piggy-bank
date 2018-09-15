@@ -1,4 +1,7 @@
-/*body{
+.pigubackground{
     background: linear-gradient(180deg, #EAF7F2 0%, #EAF7F2 31.49%, #B7F0D9 56.35%, #7BE8BC 70.17%, #4DE2A6 84.53%, #0EDA87 100%);
-opacity: 0.5;
-}*/
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
