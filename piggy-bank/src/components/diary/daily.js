@@ -1,32 +1,39 @@
 import React from 'react';
-import Carousel from "../../../node_modules/react-bootstrap/lib/Carousel"
+import PbCarousel from './PbCarousel';
+
+const getCaptions = () => {
+  const currentTime = new Date();
+  const month = currentTime.getMonth() + 1;
+  const year = currentTime.getFullYear();
+  const names = Object.freeze(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thrusday', 'Friday', 'Saturday']);
+  const date = new Date(year, month - 1, 1);
+  const result = [];
+  const day = currentTime.getDate();
+  const caption = {};
+  let currIndex = 0;
+  let cont = 0;
+  while (date.getMonth() == month - 1) {
+    const obj = {
+      title: names[date.getDay()],
+      subTitle: date.getDate(),   
+      key: cont   
+    };
+    if (day === date.getDate()) {
+      currIndex = cont;
+    }
+    cont++;
+    result.push(obj);
+    date.setDate(date.getDate() + 1);
+  }
+  caption.result = result;
+  caption.activeIndex = currIndex;
+  return caption;
+}
 
 class DailyComponent extends React.Component {
   render() {
     return <div>
-<Carousel>
-  <Carousel.Item>
-    <img width={900} height={500} alt="900x500" src="/carousel.png" />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img width={900} height={500} alt="900x500" src="/carousel.png" />
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img width={900} height={500} alt="900x500" src="/carousel.png" />
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>;
+      <PbCarousel items={getCaptions()}/>
     </div>;
   }
 }

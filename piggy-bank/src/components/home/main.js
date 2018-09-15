@@ -3,9 +3,10 @@ import piguGreen from './assets/images/pigu-green.svg';
 import './assets/style/home.css'
 
 
-export class main extends Component {
+export class Main extends Component {
   render() {
     return (
+
       <div className= "pigu">
 			<img src={piguGreen} />
       </div>
@@ -13,4 +14,4 @@ export class main extends Component {
   }
 }
 
-export default main
+export default Main
