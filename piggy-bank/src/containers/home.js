@@ -17,45 +17,33 @@ class Home extends Component {
   }
 
   getChartData() {
-   let data = [
-       {
-         label: "CAFE",
-         total: 100
-       },
-       {
-        label: "COMIDA",
-        total: 130
-      },
-      {
-        label: "GASOLINA",
-        total: 200
-      },
-      {
-        label:"renta",
-        total:800,
-      }
-      
-     ];
+    let data = [
+      { label: "CAFE", total: 100 },
+      { label: "COMIDA", total: 130 },
+      { label: "GASOLINA", total: 200 },
+      { label: "renta", total: 800 }
 
-     let labelsArr = [];
-     let totalSpent = 0;
-     let totalsArr = [];
-    
-    
+    ];
 
-     for(const catego in data){
-       console.log(catego.label)
-        labelsArr.push(catego.label);
-        totalsArr.push(catego.total);
-        totalSpent += catego.total;
-        console.log(totalsArr);
+    let labelsArr = [];
+    let totalSpent = 0;
+    let totalsArr = [];
+
+
+
+    for (const catego of data) {
+      console.log(catego.label)
+      labelsArr.push(catego.label);
+      totalsArr.push(catego.total);
+      totalSpent += catego.total;
+      console.log(totalsArr);
     }
 
-  // //catego.total/totalSpent*100
-  //   const percentageOfTotal= totalsArr.map((each)=>{(each.totalsArr / totalSpent * 100)
-  //     console.log(percentageOfTotal);
-  //     return (percentageOfTotal)
-  //   })
+    //catego.total/totalSpent*100
+      const percentageOfTotal= totalsArr.map((each)=>{(each.totalsArr / totalSpent * 100)
+        console.log(percentageOfTotal);
+        return (percentageOfTotal)
+      })
 
 
 
@@ -66,7 +54,7 @@ class Home extends Component {
         datasets: [{
           label: 'Gastos',
           data: this.percentageOfTotal,
-          backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1', ]
+          backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1',]
         }]
       }
     })
@@ -76,9 +64,9 @@ class Home extends Component {
     return (
       <div className="Home">
         <div style={{ width: '100%', position: 'relative' }}>
-          <div style={{backgroundImage:`url(${piguGreen})`,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize:'20%'}}>
+          <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '20%' }}>
             {/*<Main name={this.state.ninja}s/>*/}
-            <Chart chartData={this.state.chartData} legendPosition="bottom"/>
+            <Chart chartData={this.state.chartData} legendPosition="bottom" />
           </div>
         </div>
       </div>
