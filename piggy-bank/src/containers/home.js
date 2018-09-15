@@ -21,7 +21,7 @@ class Home extends Component {
       { label: "CAFE", total: 100 },
       { label: "COMIDA", total: 130 },
       { label: "GASOLINA", total: 200 },
-      { label: "renta", total: 800 }
+      { label: "RENTA", total: 800 }
 
     ];
 
@@ -33,27 +33,29 @@ class Home extends Component {
 
     for (const catego of data) {
       console.log(catego.label)
+
       labelsArr.push(catego.label);
       totalsArr.push(catego.total);
       totalSpent += catego.total;
-      console.log(totalsArr);
+    
     }
+    console.log(totalsArr);
 
-    //catego.total/totalSpent*100
-      const percentageOfTotal= totalsArr.map((each)=>{(each.totalsArr / totalSpent * 100)
-        console.log(percentageOfTotal);
-        return (percentageOfTotal)
-      })
+    // //catego.total/totalSpent*100
+    //   const percentageOfTotal= totalsArr.map((each)=>{(each.totalsArr / totalSpent * 100)
+    //     console.log(percentageOfTotal);
+    //     return (percentageOfTotal)
+    //   })
 
 
 
 
     this.setState({
       chartData: {
-        labels: this.labelsArr,
+        labels: ([this.labelsArr]),
         datasets: [{
           label: 'Gastos',
-          data: this.percentageOfTotal,
+          data:[(this.totalsArr)] ,
           backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1',]
         }]
       }
