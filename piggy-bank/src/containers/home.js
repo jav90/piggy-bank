@@ -12,7 +12,7 @@ class Home extends Component {
       chartData: {}
     }
   }
-  componentDidMount() {
+  componentWillMount() {
     this.getChartData()
   }
 
@@ -40,18 +40,22 @@ class Home extends Component {
      let labelsArr = [];
      let totalSpent = 0;
      let totalsArr = [];
-     let percentageOfTotal=[];
+    
+    
 
      for(const catego in data){
+       console.log(catego.label)
         labelsArr.push(catego.label);
         totalsArr.push(catego.total);
         totalSpent += catego.total;
+        console.log(totalsArr);
     }
 
-  //catego.total/totalSpent*100
-    percentageOfTotal= data.map((each)=>{
-      return (each.totalsArr / totalSpent * 100)
-    })
+  // //catego.total/totalSpent*100
+  //   const percentageOfTotal= totalsArr.map((each)=>{(each.totalsArr / totalSpent * 100)
+  //     console.log(percentageOfTotal);
+  //     return (percentageOfTotal)
+  //   })
 
 
 
@@ -62,8 +66,7 @@ class Home extends Component {
         datasets: [{
           label: 'Gastos',
           data: this.percentageOfTotal,
-          backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1', 
-          ]
+          backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1', ]
         }]
       }
     })
@@ -71,9 +74,9 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home">
+      <div className="Home">
         <div style={{ width: '100%', position: 'relative' }}>
-          <div style={{backgroundImage:`url(${piguGreen})`,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize:'13%'}}>
+          <div style={{backgroundImage:`url(${piguGreen})`,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize:'20%'}}>
             {/*<Main name={this.state.ninja}s/>*/}
             <Chart chartData={this.state.chartData} legendPosition="bottom"/>
           </div>
