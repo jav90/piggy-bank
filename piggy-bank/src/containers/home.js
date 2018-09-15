@@ -74,7 +74,7 @@ class Home extends Component {
       <div className="home">
         <div style={{ width: '100%', position: 'relative' }}>
           <div style={{backgroundImage:`url(${piguGreen})`,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize:'13%'}}>
-            {<Main name={this.state.ninja}s/>}
+            {/*<Main name={this.state.ninja}s/>*/}
             <Chart chartData={this.state.chartData} legendPosition="bottom"/>
           </div>
         </div>
