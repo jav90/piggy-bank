@@ -7,6 +7,7 @@ import Settings from "./containers/settings";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import Calendar from "./components/diary/monthly"
 
 
 const App = () => ( 
@@ -17,14 +18,10 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/diary" component={Diary} />
-        { 
-        /*<Route exact path="/profile" component={Profile} />
-        <Route exact path="/settings" component={Settings} />*/
-        }
+       
       </Wrapper>
       { 
     }
-    
     </div>
   </Router>
 );
