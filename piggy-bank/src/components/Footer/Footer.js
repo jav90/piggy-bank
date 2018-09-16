@@ -3,8 +3,8 @@ import '../Footer/Footer.css';
 import btnAdd from './assets/images/add-btn.svg'
 import btnBudget from './assets/images/budget-btn.svg'
 import btndiary from './assets/images/diary-btn.svg'
-import Navbar from "../../../node_modules/react-bootstrap/lib/Navbar";
-import Nav from "../../../node_modules/react-bootstrap/lib/Nav";
+import Navbar from "react-bootstrap/lib/Navbar";
+import Nav from "react-bootstrap/lib/Nav";
 
 const Footer = props => (
     <div>

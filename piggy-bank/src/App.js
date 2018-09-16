@@ -21,8 +21,7 @@ const App = () => (
         <Route exact path="/diary" component={Diary} />
        
       </Wrapper>
-      { 
-    }
+      <Footer></Footer>
     </div>
     
   </Router>
