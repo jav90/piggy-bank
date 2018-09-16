@@ -25,6 +25,7 @@ class Home extends Component {
 
     ];
 
+    
     let labelsArr = [];
     let totalSpent = 0;
     let totalsArr = [];
@@ -33,30 +34,24 @@ class Home extends Component {
 
     for (const catego of data) {
       console.log(catego.label)
-
       labelsArr.push(catego.label);
       totalsArr.push(catego.total);
-      totalSpent += catego.total;
     
     }
     console.log(totalsArr);
-
-    // //catego.total/totalSpent*100
-    //   const percentageOfTotal= totalsArr.map((each)=>{(each.totalsArr / totalSpent * 100)
-    //     console.log(percentageOfTotal);
-    //     return (percentageOfTotal)
-    //   })
+    console.log(totalSpent);
 
 
 
 
     this.setState({
       chartData: {
-        labels: ([this.labelsArr]),
+        labels: labelsArr,
         datasets: [{
           label: 'Gastos',
-          data:[(this.totalsArr)] ,
-          backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1',]
+          data:totalsArr ,
+          backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1',],
+          borderColor: '#EAFCFF'
         }]
       }
     })
@@ -65,9 +60,10 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
+        <div style={{height:'25%', height:'auto'}}></div> 
         <div style={{ width: '100%', position: 'relative' }}>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '20%' }}>
-            {/*<Main name={this.state.ninja}s/>*/}
+            
             <Chart chartData={this.state.chartData} legendPosition="bottom" />
           </div>
         </div>
