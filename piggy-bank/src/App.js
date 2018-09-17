@@ -22,7 +22,9 @@ const App = () => (
 
 
       </Wrapper>
-      <Footer />
+
+      <Footer></Footer>
+
     </div>
 
   </Router>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Main from '../components/home/Main.js';
 import Chart from '../components/home/Chart.js';
 import '../index.css';

@@ -4,11 +4,13 @@ import Calendar from "../components/diary/monthly";
 
 class Diary extends React.Component {
   
-
     render(){
-        return <div><DailyComponent/></div>;
         return (
+
+         
+            
             <div className="Diary">
+            <div><DailyComponent/></div>
               <header>
                 <div id="logo">
                   <span className="icon">date_range</span>

@@ -5,7 +5,7 @@ const getCaptions = () => {
   const currentTime = new Date();
   const month = currentTime.getMonth() + 1;
   const year = currentTime.getFullYear();
-  const names = Object.freeze(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thrusday', 'Friday', 'Saturday']);
+  const names = Object.freeze(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
   const date = new Date(year, month - 1, 1);
   const result = [];
   const day = currentTime.getDate();
