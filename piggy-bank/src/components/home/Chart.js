@@ -5,6 +5,7 @@ import { Doughnut } from 'react-chartjs-2';
 
 
 
+
 class Chart extends Component {
 
     constructor(props) {
