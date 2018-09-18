@@ -17,7 +17,7 @@ const Footer = props => (
             <img src={btnBudget} />
             </div>
           </a>
-          <a href="#">
+          <a href="/add">
             <div className="col-xs-4 text-center">
             <img src={btnAdd} />
             </div>
