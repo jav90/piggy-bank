@@ -10,9 +10,12 @@ const PbCarousel = (props) => {
           props.items.result.map(item => {
             return (
               <Carousel.Item key={item.key}>        
-              <img width={900} height={500} alt="900x500" src="https://react-bootstrap.github.io/carousel.png" />
+              <h1>
+                Sure
+              </h1>
                 <Carousel.Caption>
-                  <h3>{item.title} {item.subTitle}</h3>
+                  <h3 className="daydate">{item.title} {item.subTitle}</h3>
+                  Y así forever mil
                 </Carousel.Caption>
               </Carousel.Item>
             );
