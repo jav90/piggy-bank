@@ -1,67 +1,78 @@
 import React, { Component } from "react";
+import {FormControl, FormGroup, HelpBlock, FieldGroup} from "react-bootstrap";
+import{Col, ControlLabel, Checkbox, Button} from "react-bootstrap";
+
 
 class Form extends Component {
-  state = {
-    monto: '',
-    formaPago: '',
-    categoria: '',
-    concepto: '',
-    mensual: '',
-    fecha: ''
-  };
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleChange = this.handleChange.bind(this);
+
+    this.state = {
+      value: ''
+    };
+  }
+
+  getValidationState() {
+    const length = this.state.value.length;
+    if (length > 10) return 'success';
+    else if (length > 5) return 'warning';
+    else if (length > 0) return 'error';
+    return null;
+  }
+
+  handleChange(e) {
+    this.setState({ value: e.target.value });
+  }
   
-  handleChange(e){
-    this.setState({value: e.target.value});
-  }
+  render(){
+    return(
+      <form>
+      <FormGroup
+      id="formControlsCantidad"
+      type="text"
+      label="Text"
+      placeholder="Agrega $ "
+    />
 
- handleSubmit(e){
-   console.log("forma de pago" +this.state.value);
-   e.preventDefault();
- }
+    <FormGroup controlId="formControlsFormaPago">
+      <ControlLabel>Select</ControlLabel>
+      <FormControl componentClass="select" placeholder="select">
+        <option value="select">select</option>
+        <option value="other">Credit</option>
+        <option value="other">Debit</option>
+        <option value="other">Cash</option>
+      </FormControl>
+    </FormGroup>
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-          <input
-        
-        name="monto"
-          placeholder="spent"
-          value={this.state.monto}
-          onChange= {e=> this.handleChange(e)}
-          />
-          <br/>
-        <input
-          name="formaPago"
-          placeholder='Select'
-          value={this.state.formaPago}
-          onChange= {e=> this.change(e)}
-          />
-          <label>
-          Forma de pago:
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="Credito">Credito</option>
-            <option value="Debito">Debito</option>
-            <option value="Efectivo">Efectivo</option>
-          </select>
-          </label>
-          <input type= "submit" value="submit"/>
-          <label>
+     <FormGroup controlId="formControlsCategoria">
+      <ControlLabel>Seleciona tu Categoria</ControlLabel>
+      <FormControl componentClass="select" placeholder="select">
+        <option value="select">select</option>
+        <option value="other">Restaurante</option>
+        <option value="other">Coffee Shop</option>
+        <option value="other">Fijos</option>
+      </FormControl>
+    </FormGroup>
 
-          Categoria:
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="Fijo">Fijo</option>
-            <option value="Restaurante">Restaurante</option>
-            <option value="Super">Super</option>
-          </select>
-          </label>
-          <input type= "submit" value="submit"/>
+      <FormGroup
+      id="formControlsConcepto"
+      type="text"
+      label="Text"
+      placeholder="Concepto "
+    />
 
-          <button onClick={e=> this.onSubmit(e)}> Submit</button>
-        
+        <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
+          <ControlLabel>Working example with validation</ControlLabel>
+          <FormControl type="text" value={this.state.value} placeholder="Enter text" onChange={this.handleChange}/>
+          <FormControl.Feedback />
+          <HelpBlock>Validation is based on string length.</HelpBlock>
+        </FormGroup>
       </form>
-      );
-    }
+    )
   }
+}
   
   
   

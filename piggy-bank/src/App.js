@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./containers/home";
 import Diary from "./containers/diary";
-import Profile from "./containers/profile";
 import Settings from "./containers/settings";
 import Add from "./containers/add";
 import NavBar from "./components/Navbar";
@@ -12,25 +11,22 @@ import "./components/diary/assets/style.css"
 // import { settings } from "cluster";
 
 
+
 const App = () => (
-  <Router>
-
-    <div style={{ height: '100vh', margin: '0 auto', background: 'linear-gradient(180deg, #EAF7F2 0%, #EAF7F2 31.49%, #B7F0D9 56.35%, #7BE8BC 70.17%, #4DE2A6 84.53%, #0EDA87 100%)',  backgroundRepeat:'no-repeat'}}>
-      <NavBar />
-      <Wrapper>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/diary" component={Diary} />
-        <Route exact path="/settings" component={Settings} />
-        <Route exact path="/add" component={Add} />
-
-      </Wrapper>
-
-      <Footer></Footer>
-
-    </div>
-
-  </Router>
+  
+  <Router >
+  <Wrapper className= "general">
+  <NavBar />
+  
+    <Route exact path="/" component={Home} />
+    <Route exact path="/home" component={Home} />
+    <Route exact path="/diary" component={Diary} />
+    <Route exact path="/settings" component={Settings} />
+    <Route exact path="/add" component={Add} />
+  
+  <Footer/>
+  </Wrapper>
+</Router>
 );
 
 export default App;
