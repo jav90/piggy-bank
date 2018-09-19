@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Main from '../components/home/Main.js';
 import Chart from '../components/home/Chart.js';
-import '../index.css';
+
 import './assets/home.css';
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 
@@ -60,8 +60,8 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <div style={{height:'25%', height:'auto'}}></div> 
-        <div style={{ width: '100%', position: 'relative' }}>
+        {/* <div style={{height:'25%', height:'auto'}}></div>  */}
+        <div style={{ width: '100%', position: 'absoulte'}}>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
             
             <Chart chartData={this.state.chartData} legendPosition="bottom" />
