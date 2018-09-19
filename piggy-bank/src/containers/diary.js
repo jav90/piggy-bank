@@ -11,14 +11,7 @@ class Diary extends React.Component {
             
             <div className="Diary">
             <div><DailyComponent/></div>
-              <header>
-                <div id="logo">
-                  <span className="icon">date_range</span>
-                  <span>
-                    react<b>calendar</b>
-                  </span>
-                </div>
-              </header>
+
               <main>
                 <Calendar />
               </main>

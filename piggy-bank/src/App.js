@@ -7,7 +7,8 @@ import Add from "./containers/add";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
-import Calendar from "./components/diary/monthly"
+import "./components/diary/assets/style.css"
+// import { settings } from "cluster";
 
 
 
