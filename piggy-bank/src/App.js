@@ -7,7 +7,9 @@ import Add from "./containers/add";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
-import "./components/diary/assets/style.css"
+import "./components/diary/assets/style.css";
+import login from "./components/login/login";
+import Profile from "./containers/profile";
 // import { settings } from "cluster";
 
 
@@ -23,7 +25,8 @@ const App = () => (
     <Route exact path="/diary" component={Diary} />
     <Route exact path="/settings" component={Settings} />
     <Route exact path="/add" component={Add} />
-  
+    <Route exact path="/login" component={login} />
+    <Route exact path="/profile" component={Profile} />
   <Footer/>
   </Wrapper>
 </Router>
