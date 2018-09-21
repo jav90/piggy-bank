@@ -22,7 +22,7 @@ const Footer = props => (
             <img src={btnAdd} />
             </div>
           </a>
-          <a href="#">
+          <a href="/diary">
             <div className="col-xs-4 text-center">
             <img src={btndiary} />
             </div>

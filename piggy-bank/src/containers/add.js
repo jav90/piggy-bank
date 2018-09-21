@@ -1,30 +1,41 @@
 import React, { Component } from "react";
 import Form from "../components/add-expense/Form";
 import AddFormApi from "../api/AddFormApi";
+import "./assets/generalStyle.css";
+import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
+import { Col, Grid, Row } from "react-bootstrap";
 
 
 class Add extends Component {
-  state={
-    id:this.props.id,
-    cantidad: this.props.cantidad,
-    formaPago: this.props.formaPago,
-    categoria: this.props.categoria,
-    concepto: this.props.concepto,
-    mensual: this.props.mensual,
-    fecha: this.props.fecha
+  state = {
+    id: "",
+    cantidad: "",
+    formaPago: "",
+    categoria: "",
+    concepto: "",
+    mensual: "",
+    fecha: ""
   };
 
- 
-  onSumbit = (fields)=> {
-    this.setState({fields});
-  };
+
+  // onSumbit = (fields)=> {
+  //   this.setState({fields});
+  // };
 
   render() {
     return (
-      <div className="Add">
-        <Form onSubmit={fields=> this.onSubmit(fields)}/>
-          <p>{JSON.stringify(this.state.fields, null, 2)}</p>
-      </div>
+      
+      <Grid>
+
+
+        <Row className="add">
+        <Col xs={12} md={4}>
+          <Form />
+          </Col>
+
+        </Row>
+      </Grid>
+
     )
   }
 }
