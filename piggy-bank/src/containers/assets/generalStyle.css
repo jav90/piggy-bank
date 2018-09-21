@@ -6,6 +6,24 @@
 }
 
 h1{
-    color: red;
+    color:#123E6D;
+    font-size: 15px;
+    padding: 15px;
+    margin: 15px;
 }
 
+.piguLog{
+
+    display:block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.register{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left:auto;
+    margin-right:auto;
+}

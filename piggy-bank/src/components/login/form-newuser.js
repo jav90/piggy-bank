@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
-import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+import { Col, Grid, Row,Form, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
 
 
 
@@ -15,7 +15,8 @@ class FormNewUser extends Component {
       nombre: '',
       email:'',
       password:'',
-      profesión:'',
+      profesion:'',
+      income:''
       
     };
   }
@@ -30,6 +31,7 @@ class FormNewUser extends Component {
 
   handleChange(e) {
     this.setState({ value: e.target.value });
+    console.log(this.state);
   }
 
 
@@ -47,7 +49,12 @@ class FormNewUser extends Component {
                                     Nombre
                                 </Col>
                                 <Col sm={10}>
-                                    <FormControl type="text" placeholder="Nombre" value={this.state.nombre} onChange={this.onFormChanged} />
+                                    <FormControl 
+                                    type="text"
+                                    name="nombre" 
+                                    placeholder="Nombre"
+                                    value={this.state.nombre} 
+                                    onChange={this.onFormChanged} />
                                 </Col>
                             </FormGroup>
                   
@@ -56,7 +63,12 @@ class FormNewUser extends Component {
                                     Email
                                 </Col>
                                 <Col sm={10}>
-                                    <FormControl type="email" placeholder="Email" />
+                                        <FormControl 
+                                        type="email" 
+                                        name="email"
+                                        placeholder="Email" 
+                                        value={this.state.email} 
+                                        onChange={this.onFormChanged} />
                                 </Col>
                             </FormGroup>
 
@@ -65,7 +77,12 @@ class FormNewUser extends Component {
                                     Password
                                 </Col>
                                 <Col sm={10}>
-                                    <FormControl type="password" placeholder="Password" />
+                                    <FormControl 
+                                        type="password"  
+                                        name="password" 
+                                        placeholder="Password" 
+                                        value={this.state.password} 
+                                        onChange={this.onFormChanged} />
                                 </Col>
                             </FormGroup>
                         </Form>;      
@@ -79,16 +96,26 @@ class FormNewUser extends Component {
     <Form inline>
                           <FormGroup controlId="formInlineProf">
                            <ControlLabel>Profesión</ControlLabel>{' '}
-                           <FormControl type="text" placeholder="Economist" />
-                      </FormGroup>{' '}
+                           <FormControl 
+                                type="text" 
+                                name="profesion"
+                                placeholder="¿A que te dedicas?"  
+                                value={this.state.profesion} 
+                                onChange={this.onFormChanged}/>
+                            </FormGroup>{' '}
                            <FormGroup controlId="formInlinesalary">
                            <ControlLabel>Salario</ControlLabel>{' '}
-                           <FormControl type="email" placeholder="How much do you make $?" />
+                           <FormControl 
+                            type="text" 
+                            name='income'
+                            placeholder="How much do you make $?" 
+                            value={this.state.income} 
+                            onChange={this.onFormChanged}/>
                        </FormGroup>{' '}
     </Form>;
     </col>
 </Row>
-<Button bsStyle="success">Create Profile!</Button>
+<Button onClick={() => this.handleFormSubmit()} bsStyle="success">Create Profile!</Button>
       </Grid>
     )
   }

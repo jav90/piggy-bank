@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FormControl, FormGroup, Form} from "react-bootstrap";
 import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+import API from "../../api/API";
 
 
 
@@ -21,8 +22,12 @@ class LogIn extends Component {
 
     handleFormSubmit()
     {
-        
-        console.log(this.state)
+        API.postUsuario(this.state)
+        .then(usuario => {
+            console.log(usuario);
+        })
+        .catch(err => console.log(err))
+        console.log(this.state);
     }
 
     render() {
@@ -41,7 +46,11 @@ class LogIn extends Component {
                                     Name
                                 </Col>
                                 <Col sm={10}>
-                                    <FormControl type="Name"  name="nombre" placeholder="Nombre" value={this.state.nombre} onChange={this.onFormChanged}/>
+                                    <FormControl
+                                     type="Name"  
+                                     name="nombre" 
+                                     placeholder="Nombre" 
+                                     value={this.state.nombre} onChange={this.onFormChanged}/>
                                 </Col>
                             </FormGroup>
                             <FormGroup controlId="formHorizontalEmail">
@@ -49,7 +58,8 @@ class LogIn extends Component {
                                     Email
                                 </Col>
                                 <Col sm={10}>
-                                    <FormControl type="email" placeholder="Email" value={this.state.email} onChange={this.onFormChanged} />
+                                    <FormControl 
+                                        type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.onFormChanged} />
                                 </Col>
                             </FormGroup>
 
@@ -58,7 +68,7 @@ class LogIn extends Component {
                                     Password
                                 </Col>
                                 <Col sm={10}>
-                                    <FormControl type="password" placeholder="Password" value={this.state.password} onChange={this.onFormChanged} />
+                                    <FormControl type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.onFormChanged} />
                                 </Col>
                             </FormGroup>
 
@@ -70,7 +80,7 @@ class LogIn extends Component {
 
                             <FormGroup>
                                 <Col smOffset={2} sm={10}>
-                                    <Button link  onClick={() => this.handleFormSubmit()}>Sign in</Button>
+                                    <Button onClick={() => this.handleFormSubmit()}>Sign in</Button>
                                 </Col>
                             </FormGroup>
                         </Form>;                
