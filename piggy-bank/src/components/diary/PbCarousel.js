@@ -9,13 +9,10 @@ const PbCarousel = (props) => {
         {
           props.items.result.map(item => {
             return (
-              <Carousel.Item key={item.key}>        
-              <h1>
-                Sure
-              </h1>
+              <Carousel.Item key={item.key}>   
+              
                 <Carousel.Caption>
-                  <h3 className="daydate">{item.title} {item.subTitle}</h3>
-                  Y así forever mil
+                  <h3 id= "daydate">{item.title} {item.subTitle}</h3>
                 </Carousel.Caption>
               </Carousel.Item>
             );

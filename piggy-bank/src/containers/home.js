@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Main from '../components/home/Main.js';
-import Chart from '../components/home/Chart.js';
-
+import './assets/home.css';
 
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
+import HomeCarousel from "../components/home/HomeCarousel.js";
+
 
 class Home extends Component {
   constructor() {
@@ -30,8 +31,7 @@ class Home extends Component {
     let totalSpent = 0;
     let totalsArr = [];
 
-
-
+    
     for (const catego of data) {
       console.log(catego.label)
       labelsArr.push(catego.label);
@@ -40,8 +40,6 @@ class Home extends Component {
     }
     console.log(totalsArr);
     console.log(totalSpent);
-
-
 
 
     this.setState({
@@ -63,8 +61,7 @@ class Home extends Component {
         {/* <div style={{height:'25%', height:'auto'}}></div>  */}
         <div style={{ width: '100%', position: 'absoulte'}}>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
-            
-            <Chart chartData={this.state.chartData} legendPosition="bottom" />
+            <HomeCarousel chartData={this.state.chartData} />
           </div>
         </div>
       </div>
