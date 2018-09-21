@@ -19,7 +19,6 @@ const App = () => (
   <Router >
   <Wrapper className= "general">
   <NavBar />
-  
     <Route exact path="/" component={Home} />
     <Route exact path="/home" component={Home} />
     <Route exact path="/diary" component={Diary} />
