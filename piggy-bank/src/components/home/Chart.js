@@ -40,7 +40,8 @@ class Chart extends Component {
                                 top: 0,
                                 bottom: 0
                             }
-                        }
+                        },
+                        responsive: true
                     }}
                 />
             </div>

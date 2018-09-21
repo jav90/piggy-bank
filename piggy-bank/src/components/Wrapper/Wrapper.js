@@ -1,6 +1,13 @@
 import React from "react";
-import "./Wrapper.css";
+import "../Wrapper/Wrapper.css";
+import {Grid} from "react-bootstrap";
 
-const Wrapper = props => <main className="wrapper" {...props} />;
+const Wrapper = props => 
+<Grid>
+  
+<main className="wrapper" {...props} />
+    
+</Grid>
+
 
 export default Wrapper;

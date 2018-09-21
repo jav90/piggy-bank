@@ -6,7 +6,7 @@ const HomeCarousel = (props) => {
 
 
   return (
-    <div className="col-md-5">
+    <div >
         <Carousel>
             <Carousel.Item>
                 <Chart chartData={props.chartData} legendPosition="bottom"/>
