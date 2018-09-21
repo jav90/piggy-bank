@@ -12,7 +12,11 @@ class FormNewUser extends Component {
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      value: ''
+      nombre: '',
+      email:'',
+      password:'',
+      profesión:'',
+      
     };
   }
 
@@ -40,10 +44,10 @@ class FormNewUser extends Component {
                         <Form horizontal>
                         <FormGroup controlId="formHorizontalName">
                                 <Col componentClass={ControlLabel} sm={2}>
-                                    Name
+                                    Nombre
                                 </Col>
                                 <Col sm={10}>
-                                    <FormControl type="email" placeholder="Email" />
+                                    <FormControl type="text" placeholder="Nombre" value={this.state.nombre} onChange={this.onFormChanged} />
                                 </Col>
                             </FormGroup>
                   

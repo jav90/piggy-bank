@@ -19,8 +19,9 @@ class LogIn extends Component {
         });
     }
 
-    handleFormSubmit(cb)
+    handleFormSubmit()
     {
+        
         console.log(this.state)
     }
 
@@ -69,7 +70,7 @@ class LogIn extends Component {
 
                             <FormGroup>
                                 <Col smOffset={2} sm={10}>
-                                    <Button link type="submit" onClick={() => this.handleFormSubmit()}>Sign in</Button>
+                                    <Button link  onClick={() => this.handleFormSubmit()}>Sign in</Button>
                                 </Col>
                             </FormGroup>
                         </Form>;                

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FormNewUser from "../components/login/form-newuser";
 import LogIn from "../components/login/login";
-import AddFormApi from "../api/AddFormApi";
+import AddFormApi from "../api/API";
 import "./assets/generalStyle.css";
 import PiguAdd from "./assets/images/add-user.svg";
 
