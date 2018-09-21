@@ -32,7 +32,7 @@ const NavBar = props => (
           id="dropdown-no-caret"
         >
         
-          <MenuItem eventKey="1">Settings</MenuItem>
+          <MenuItem  eventKey="1">Settings</MenuItem>
           <MenuItem href="/profile" eventKey="2">Profile</MenuItem>
           <MenuItem eventKey="3">Pigu Tips!</MenuItem>
           <MenuItem divider />
