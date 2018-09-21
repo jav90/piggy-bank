@@ -17,8 +17,8 @@ class Diary extends React.Component {
     render(){
         return (
             <div className="Diary">
-            <div><DailyComponent day={this.state.selectedDate}/>{`${this.state.selectedDate}` || ""}</div>
             
+            <DailyComponent day={this.state.selectedDate}/>
               <main>
                 <Calendar onDianaClick={this.onDateClick}/>
               </main>
