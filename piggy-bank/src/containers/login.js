@@ -3,7 +3,9 @@ import FormNewUser from "../components/login/form-newuser";
 import LogIn from "../components/login/login";
 import AddFormApi from "../api/API";
 import "./assets/generalStyle.css";
-import PiguAdd from "./assets/images/add-user.svg";
+import PiguAdd from "./assets/images/piguBlue.svg";
+import CreateNew from "./assets/images/createNew.svg";
+import { Col, Grid, Row, Image } from "react-bootstrap";
 
 
 class Add extends Component {
@@ -18,30 +20,28 @@ class Add extends Component {
   };
 
 
-  // onSumbit = (fields)=> {
-  //   this.setState({fields});
-  // };
+
 
   render() {
     return (
-      
-      <Grid>
-        <Row className="logIn">
-        <Col xs={12} md={4}>
-        
-          HELLO
-        <Image src={PiguAdd} />
-    
-        
-        </Col>
-        </Row>
 
-        <Row className="add">
-          
-        <Col xs={12} md={4}>
-        <Image src={PiguAdd} />
-          <LogIn/>
+      <Grid>
+        <Row>
+          <Col xs={12} md={4}>
+            <Image src={PiguAdd} className="piguLog" />
           </Col>
+        </Row>
+        <Row className="add-form">
+
+          <Col xs={12} md={4}>
+
+            <LogIn />
+          </Col>
+          <Row className="register">
+          <Col md={6} mdPull={6}>
+          <Image src={CreateNew} className="createNew" />
+          </Col>
+        </Row>
 
         </Row>
       </Grid>
