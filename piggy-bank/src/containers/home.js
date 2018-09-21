@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Main from '../components/home/Main.js';
-import './assets/home.css';
-
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 import HomeCarousel from "../components/home/HomeCarousel.js";
 
