@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Form from "../components/add-expense/Form";
+import FormNewUser from "../components/login/form-newuser";
+import LogIn from "../components/login/login";
 import AddFormApi from "../api/AddFormApi";
 import "./assets/generalStyle.css";
-import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
-import { Col, Grid, Row } from "react-bootstrap";
+import PiguAdd from "./assets/images/add-user.svg";
 
 
 class Add extends Component {
@@ -26,11 +26,21 @@ class Add extends Component {
     return (
       
       <Grid>
-
+        <Row className="logIn">
+        <Col xs={12} md={4}>
+        
+          HELLO
+        <Image src={PiguAdd} />
+    
+        
+        </Col>
+        </Row>
 
         <Row className="add">
+          
         <Col xs={12} md={4}>
-          <Form />
+        <Image src={PiguAdd} />
+          <LogIn/>
           </Col>
 
         </Row>

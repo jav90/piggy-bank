@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import {FormControl, FormGroup, HelpBlock, FieldGroup} from "react-bootstrap";
-import{Col, ControlLabel, Checkbox, Button} from "react-bootstrap";
+import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
+import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+
+
 
 
 class Form extends Component {
@@ -25,55 +27,69 @@ class Form extends Component {
   handleChange(e) {
     this.setState({ value: e.target.value });
   }
-  
-  render(){
-    return(
-      <form>
-      <FormGroup
-      id="formControlsCantidad"
-      type="text"
-      label="Text"
-      placeholder="Agrega $ "
-    />
 
-    <FormGroup controlId="formControlsFormaPago">
-      <ControlLabel>Select</ControlLabel>
-      <FormControl componentClass="select" placeholder="select">
-        <option value="select">select</option>
-        <option value="other">Credit</option>
-        <option value="other">Debit</option>
-        <option value="other">Cash</option>
-      </FormControl>
-    </FormGroup>
 
-     <FormGroup controlId="formControlsCategoria">
-      <ControlLabel>Seleciona tu Categoria</ControlLabel>
-      <FormControl componentClass="select" placeholder="select">
-        <option value="select">select</option>
-        <option value="other">Restaurante</option>
-        <option value="other">Coffee Shop</option>
-        <option value="other">Fijos</option>
-      </FormControl>
-    </FormGroup>
 
-      <FormGroup
-      id="formControlsConcepto"
-      type="text"
-      label="Text"
-      placeholder="Concepto "
-    />
+  render() {
+    return (
+      <Grid>
+        <Row>
+        <Col xs={12} md={4}>
+            <form>
+          <FormGroup>
+            <Col xs={12} md={4}>
+              <InputGroup>
+                <InputGroup.Addon>$</InputGroup.Addon>
+                <FormControl type="text" />
+                <InputGroup.Addon>.00</InputGroup.Addon>
+              </InputGroup>
+            </Col>
+          </FormGroup>
+          
+              <FormGroup controlId="formHorizontalMonto">
+                <Col componentClass={ControlLabel} sm={2}>
+                  Concepto
+    </Col>
+                <Col sm={12}>
+                  <FormControl type="email" placeholder="¿En donde" />
+                </Col>
+              </FormGroup>
 
-        <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
-          <ControlLabel>Working example with validation</ControlLabel>
-          <FormControl type="text" value={this.state.value} placeholder="Enter text" onChange={this.handleChange}/>
-          <FormControl.Feedback />
-          <HelpBlock>Validation is based on string length.</HelpBlock>
-        </FormGroup>
-      </form>
+              <FormGroup controlId="formControlsFormaPago">
+              <Col xs={12} md={4}>
+                <ControlLabel>Forma de pago</ControlLabel>
+                <FormControl componentClass="select" placeholder="select">
+                  <option value="select">select</option>
+                  <option value="other">Credit</option>
+                  <option value="other">Debit</option>
+                  <option value="other">Cash</option>
+                </FormControl>
+              </Col>
+              </FormGroup>
+
+              <FormGroup controlId="formControlsCategoria">
+              <Col xs={12} md={4}>
+                <ControlLabel>Categoria</ControlLabel>
+                <FormControl componentClass="select" placeholder="select">
+                  <option value="select">select</option>
+                  <option value="other">Restaurante</option>
+                  <option value="other">Coffee Shop</option>
+                  <option value="other">Fijos</option>
+                </FormControl>
+                </Col>
+              </FormGroup>
+
+            
+            <Button bsStyle="success">Add!</Button>
+
+            </form>
+          </Col>
+        </Row>
+      </Grid>
     )
   }
 }
-  
-  
-  
+
+
+
 export default Form;
