@@ -32,8 +32,8 @@ class Budget extends Component {
         <Row>
           <Col xs={12}>
           <Image src={Btnbudget} style={{width:'150px', align:'center'}}/>
-          <h2><strong>Plan your budget!</strong></h2>
-          <p>Meditate on your last month´s expenses</p>
+          <h2>Plan your budget!</h2>
+          <p>This is a good time to meditate on your last month´s expenses, and carefully craft this month´s Budget plan! </p>
           </Col>
 
         </Row>

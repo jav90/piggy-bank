@@ -72,20 +72,28 @@ handleFormSubmit()
               <FormGroup controlId="formHorizontalMonto">
                 <Col componentClass={ControlLabel} sm={2}>
                   Concepto
-    </Col>
-                <Col sm={12}>
-                  <FormControl type="email" placeholder="¿En donde" />
                 </Col>
+                
+                  <FormControl 
+                  type="email" 
+                  placeholder="Email" 
+                  value={this.state.email}
+                  onChange={this.onFormChanged}/>
               </FormGroup>
 
               <FormGroup controlId="formControlsFormaPago">
               <Col xs={12} md={4}>
                 <ControlLabel>Forma de pago</ControlLabel>
-                <FormControl componentClass="select" placeholder="select">
-                  <option value="select">select</option>
+                <FormControl 
+                componentClass="select"
+                placeholder="select"
+                value={this.state.formaPago}
+                onChange={this.onFormChanged}>
+                  
                   <option value="other">Credit</option>
                   <option value="other">Debit</option>
                   <option value="other">Cash</option>
+                  
                 </FormControl>
               </Col>
               </FormGroup>
@@ -93,16 +101,30 @@ handleFormSubmit()
               <FormGroup controlId="formControlsCategoria">
               <Col xs={12} md={4}>
                 <ControlLabel>Categoria</ControlLabel>
-                <FormControl componentClass="select" placeholder="select">
-                  <option value="select">select</option>
-                  <option value="other">Restaurante</option>
-                  <option value="other">Coffee Shop</option>
-                  <option value="other">Fijos</option>
+                <FormControl 
+                componentClass="select" 
+                placeholder="¿Selecciona la categoría"
+                value={this.state.categoria}
+                onChange={this.onFormChanged}>
+        
+                  <option value="Fijos">Fijos</option>
+                  <option value="Restaurante">Restaurante</option>
+                  <option value="coffeeshop">Coffee Shop</option>
+                  <option value="Rappyuber">Rappy & uber</option>
+                  <option value="Social">Social</option>
+                  <option value="Mascota">Mascota</option>
+                  <option value="Home">Home</option>
+                  <option value="Regalos">Regalos</option>
+                  <option value="Apapacheo">Apapacheo</option>
+                  <option value="Transporte">Transporte</option>
+                  <option value="Ropa">Ropa</option>
+                  <option value="Coffe Shop">Coffe Shop</option>
+                  <option value="Subscripciones">Subscripciones</option>
+                  <option value="Super">Super</option>
+
                 </FormControl>
                 </Col>
-              </FormGroup>
-
-            
+              </FormGroup>            
             <Button bsStyle="success" onClick={() => this.handleFormSubmit()} style={{marginTop:'10%'}}>Add!</Button>
 
             </form>
