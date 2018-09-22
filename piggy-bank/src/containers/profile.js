@@ -19,11 +19,12 @@ class Profile extends React.Component {
 
                     <Col xs={12} md={6}>
                         <Jumbotron className="profile">
-                            <h1>Hello, I'm José</h1>
+                            <h2><strong>Hello, José</strong></h2>
                             <Image width="250px" src={foto} />
                             <p> Bass Player </p>
-                            <p> Monthly Income = $10,000 </p>
-                            <p> I wanna -- Travel </p>
+                            <p> Monthly Income : $10,000 </p>
+                            <p> I Love to Travel </p>
+                            <Button bsStyle="info">Edit Profile</Button>
                         </Jumbotron>
                     </Col>
                 </Row>

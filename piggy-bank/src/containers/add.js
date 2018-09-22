@@ -26,8 +26,8 @@ class Add extends Component {
       <Grid>
         <Row>
           <Col xs={12}>
-          <Image src={lapiz} style={{width:'200px', align:'center'}}/>
-          <h2>Add a new expense!</h2>
+          <Image src={lapiz} style={{width:'150px', align:'center'}}/>
+          <h2><strong>Add a new expense!</strong></h2>
           </Col>
 
         </Row>
