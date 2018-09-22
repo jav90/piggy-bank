@@ -15,9 +15,24 @@ const getCaptions = (currDate) => {
 
   const amounts = []; 
 
-  amounts[1] = 50;
-  amounts[2] = 20;
-  amounts[3] = 30;
+  amounts[1] = "$"+50;
+  amounts[2] = "$"+20;
+  amounts[3] = "$"+30;
+
+  /*const amounts2 = [
+    {
+      "fecha": "2018-08-04T00:00:00.000Z",
+      "total": 7254
+    },
+    {
+      "fecha": "2018-08-04T00:00:00.000Z",
+      "total": 7254
+    },
+    {
+      "fecha": "2018-08-04T00:00:00.000Z",
+      "total": 7254
+    },
+  ];*/
 
   while (date.getMonth() == month - 1) {
     
