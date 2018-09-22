@@ -15,7 +15,7 @@ const getCaptions = (currDate) => {
 
   const amounts = []; 
 
-  amounts[1] = 10;
+  amounts[1] = 50;
   amounts[2] = 20;
   amounts[3] = 30;
 
