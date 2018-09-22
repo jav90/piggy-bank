@@ -18,6 +18,9 @@ h2{
     font-family: 'Quicksand', sans-serif;
     padding: 15px;
     margin: 15px;
+    font-size: 30px;
+    position: static;
+    
 }
 
 .piguLog{
@@ -40,4 +43,10 @@ h2{
    margin-top: 20%;
    padding: 10%;
    background:red;
+}
+.profile{
+    color:#123E6D;
+    font-size: 30px;
+    text-align: center;
+
 }
