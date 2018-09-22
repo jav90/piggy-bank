@@ -24,7 +24,7 @@ class Diary extends React.Component {
               </main>
             </div>
           );
-        
+
     }
 }
 

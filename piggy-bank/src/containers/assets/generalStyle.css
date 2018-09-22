@@ -7,9 +7,9 @@
 
 h1{
     color:#123E6D;
-    font-size: 15px;
-    padding: 15px;
-    margin: 15px;
+    font-size: 30px;
+    position: static;
+    
 }
 
 .piguLog{
@@ -26,4 +26,11 @@ h1{
     margin-bottom: 10%;
     margin-left:auto;
     margin-right:auto;
+}
+
+.profile{
+    color:#123E6D;
+    font-size: 30px;
+    text-align: center;
+
 }
