@@ -1,5 +1,7 @@
 import {Carousel} from "react-bootstrap";
 import React from 'react';
+import {Image} from 'react-bootstrap';
+import deg from './assets/degradado.png';
 
 const PbCarousel = (props) => {
   console.log("props.items.activeIndex ", props.items.activeIndex);
@@ -10,8 +12,8 @@ const PbCarousel = (props) => {
         {
           props.items.result.map(item => {
             return (
-              <Carousel.Item key={item.key}>   
-       
+              <Carousel.Item key={item.key}> 
+              <img width={320} height={150} alt="Today!" src={deg} />
                 <Carousel.Caption className="item">
                   <h3>{item.title} {item.subTitle} - {item.amount}</h3>
                 </Carousel.Caption>
