@@ -9,6 +9,11 @@ export default {
     },
     postUsuario: function(usuario) {
         return axios.post(process.env.REACT_APP_API_URL + "/api/usuario", usuario);
+<<<<<<< HEAD
+    }
+
+  
+=======
     },
 
     getDaily: function() {
@@ -24,4 +29,5 @@ export default {
           })
         
       }
+>>>>>>> master
   };

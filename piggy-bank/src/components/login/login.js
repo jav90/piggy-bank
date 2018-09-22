@@ -45,7 +45,7 @@ class LogIn extends Component {
                                 <Col componentClass={ControlLabel} sm={2}>
                                     Name
                                 </Col>
-                                <Col sm={12} md={6} lg={4}>
+                                <Col sm={12} md={6}>
                                     <FormControl
                                      type="Name"  
                                      name="nombre" 
@@ -57,14 +57,14 @@ class LogIn extends Component {
                                 <Col componentClass={ControlLabel} sm={2}>
                                     Email
                                 </Col>
-                                <Col sm={12} md={6} lg={4}>
+                                <Col sm={12} md={6}>
                                     <FormControl 
                                         type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.onFormChanged} />
                                 </Col>
                             </FormGroup>
 
                             <FormGroup controlId="formHorizontalPassword">
-                                <Col componentClass={ControlLabel} sm={12} md={6} lg={4}>
+                                <Col componentClass={ControlLabel} sm={2}>
                                     Password
                                 </Col>
                                 <Col sm={10}>
@@ -73,7 +73,7 @@ class LogIn extends Component {
                             </FormGroup>
 
                             <FormGroup>
-                                <Col smOffset={2} sm={10} style={{alignContent:"center"}}>
+                                <Col smOffset={2} sm={10}>
                                     <Checkbox>Remember me</Checkbox>
                                 </Col>
                             </FormGroup>
