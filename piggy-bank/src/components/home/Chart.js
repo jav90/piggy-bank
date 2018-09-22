@@ -41,7 +41,8 @@ class Chart extends Component {
                                 bottom: 0
                             }
                         },
-                        responsive: true
+                       
+                        maintainAspectRatio: true
                     }}
                 />
             </div>

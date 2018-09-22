@@ -12,7 +12,7 @@ class Diary extends React.Component {
     console.log(day)
     this.setState({
       selectedDate: day
-    });
+    })
   };
     render(){
         return (
