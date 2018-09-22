@@ -69,6 +69,7 @@ class Home extends Component {
       <div className="Home">
         <div style={{marginTop:'20%'}}>
           <h2><strong>Welcome Jose!</strong></h2>
+          <h1>Checkout is your current expenses rate!</h1>
         </div>
         <div style={{ width: '100%', position: 'absoulte'}}>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
