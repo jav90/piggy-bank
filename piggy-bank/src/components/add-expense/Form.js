@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
 import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
-
+import API from "../../api/API";
 
 
 
@@ -9,24 +9,41 @@ class Form extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      value: ''
+      id: "",
+      cantidad: "",
+      formaPago: "",
+      categoria: "",
+      concepto: "",
+      mensual: "",
+      fecha: ""
     };
   }
 
-  getValidationState() {
-    const length = this.state.value.length;
-    if (length > 10) return 'success';
-    else if (length > 5) return 'warning';
-    else if (length > 0) return 'error';
-    return null;
-  }
+  // getValidationState() {
+  //   const length = this.state.value.length;
+  //   if (length > 10) return 'success';
+  //   else if (length > 5) return 'warning';
+  //   else if (length > 0) return 'error';
+  //   return null;
+  // }
 
-  handleChange(e) {
-    this.setState({ value: e.target.value });
-  }
+  onFormChanged=(event)=>{
+    this.setState({
+        [event.target.name]: event.target.value
+    });
+}
+
+handleFormSubmit()
+{
+    API.postGasto(this.state)
+    .then(gasto => {
+        console.log(gasto);
+    })
+    .catch(err => console.log(err))
+    console.log(this.state);
+}
 
 
 
@@ -40,7 +57,13 @@ class Form extends Component {
             <Col xs={12} md={4}>
               <InputGroup>
                 <InputGroup.Addon>$</InputGroup.Addon>
-                <FormControl type="text" />
+                <FormControl
+                 type="text" 
+                 name="cantidad"
+                 placeholder="cantidad"
+                 value={this.state.nombre}
+                 onChange={this.onFormChanged}/>
+
                 <InputGroup.Addon>.00</InputGroup.Addon>
               </InputGroup>
             </Col>
@@ -80,7 +103,7 @@ class Form extends Component {
               </FormGroup>
 
             
-            <Button bsStyle="success">Add!</Button>
+            <Button bsStyle="success" onClick={() => this.handleFormSubmit()} style={{marginTop:'10%'}}>Add!</Button>
 
             </form>
           </Col>
