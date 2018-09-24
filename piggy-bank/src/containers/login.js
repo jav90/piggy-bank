@@ -31,18 +31,23 @@ class Add extends Component {
             <Image src={PiguAdd} className="piguLog" />
           </Col>
         </Row>
-        <Row className="add-form">
-
+        <Row>
+          <Col xs={12} md={4}>
+          <h1>Bienvenido, Soy Pigu!</h1>
+          </Col>
+        </Row>
+        <Row >
           <Col xs={12} md={4}>
 
             <LogIn />
           </Col>
-          <Row className="register">
-          <Col md={6} mdPull={6}>
-          <Image src={CreateNew} className="createNew" />
+          <Row className= "createNew"  >
+          <a href="/newuser">
+          <Col md={6} mdPull={6} style={{marginLeft:'50%'}}>
+          <Image src={CreateNew}  />
           </Col>
+          </a>
         </Row>
-
         </Row>
       </Grid>
 

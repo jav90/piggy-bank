@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import Form from "../components/add-expense/Form";
-import AddFormApi from "../api/API";
 import "./assets/generalStyle.css";
-import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
-import { Col, Grid, Row } from "react-bootstrap";
-
+import { Col, Grid, Row, Image } from "react-bootstrap";
+import lapiz from "./assets/images/lapiz-05.svg";
 
 class Add extends Component {
   state = {
@@ -26,7 +24,13 @@ class Add extends Component {
     return (
       
       <Grid>
+        <Row>
+          <Col xs={12}>
+          <Image src={lapiz} style={{width:'150px', align:'center'}}/>
+          <h2><strong>Add a new expense!</strong></h2>
+          </Col>
 
+        </Row>
 
         <Row className="add">
         <Col xs={12} md={4}>

@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import Main from '../components/home/Main.js';
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 import HomeCarousel from "../components/home/HomeCarousel.js";
-
+import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+import "./assets/generalStyle.css";
+// import API from "../../api/API";
 
 class Home extends Component {
   constructor() {
@@ -16,6 +18,14 @@ class Home extends Component {
   }
 
   getChartData() {
+    
+    // let data = API.getGastos()
+    // .then(gasto => {
+    //   console.log(gasto);
+    // })
+    // .catch(err => console.log(err))
+    //   console.log(this.state);
+    
     let data = [
       { label: "CAFE", total: 100 },
       { label: "COMIDA", total: 130 },
@@ -55,14 +65,19 @@ class Home extends Component {
 
   render() {
     return (
+      <Grid>
       <div className="Home">
-        {/* <div style={{height:'25%', height:'auto'}}></div>  */}
+        <div style={{marginTop:'20%'}}>
+          <h2><strong>Welcome Jose!</strong></h2>
+          <h1>Checkout is your current expenses rate!</h1>
+        </div>
         <div style={{ width: '100%', position: 'absoulte'}}>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
             <HomeCarousel chartData={this.state.chartData} />
           </div>
         </div>
       </div>
+      </Grid>
     )
   }
 }
