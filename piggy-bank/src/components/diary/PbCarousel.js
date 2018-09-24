@@ -2,20 +2,18 @@ import {Carousel} from "react-bootstrap";
 import React from 'react';
 
 const PbCarousel = (props) => {
+  console.log("props.items.activeIndex ", props.items.activeIndex);
   return (
     <div className="col-md-5">
     
-      <Carousel indicators={false} defaultActiveIndex={props.items.activeIndex}>
+      <Carousel interval={null} indicators={false} activeIndex={props.items.activeIndex} defaultActiveIndex={props.items.activeIndex}>
         {
           props.items.result.map(item => {
             return (
-              <Carousel.Item key={item.key}>        
-              <h1>
-                Sure
-              </h1>
-                <Carousel.Caption>
-                  <h3 className="daydate">{item.title} {item.subTitle}</h3>
-                  Y así forever mil
+              <Carousel.Item key={item.key}>   
+       
+                <Carousel.Caption className="item">
+                  <h3>{item.title} {item.subTitle} - {item.amount}</h3>
                 </Carousel.Caption>
               </Carousel.Item>
             );

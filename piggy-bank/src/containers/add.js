@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "../components/add-expense/Form";
-import AddFormApi from "../api/AddFormApi";
+import AddFormApi from "../api/API";
 import "./assets/generalStyle.css";
 import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
 import { Col, Grid, Row } from "react-bootstrap";

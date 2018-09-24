@@ -230,5 +230,14 @@ main {
 }
 
 .daydate {
-color: black;
+color: rgb(8, 3, 3);
+position: relative;
+margin-top: 50px;
 }
+
+.item{
+  position: static;
+  color: rgb(56, 55, 55);
+  text-shadow:  0 0px 0px rgba(0,0,0,0);
+}
+
