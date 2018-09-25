@@ -24,29 +24,22 @@ const NavBar = props => (
 
       <ButtonToolbar>
         <DropdownButton
-        
-          
           bsSize="small"
           title="Settings"
           noCaret
-          id="dropdown-no-caret"
-        >
-        
-          
-          <MenuItem href="/profile" eventKey="1">Profile</MenuItem>
-          <MenuItem href="/tips" eventKey="2">Pigu Tips!</MenuItem>
-          <MenuItem divider />
-          <MenuItem href="/login" eventKey="3">LOG OUT</MenuItem>
+          id="dropdown-no-caret">
+            <MenuItem href="/profile" eventKey="1">Profile</MenuItem>
+            <MenuItem href="/tips" eventKey="2">Pigu Tips!</MenuItem>
+            <MenuItem divider />
+            <MenuItem href="/login" eventKey="3">LOG OUT</MenuItem>
         </DropdownButton>
       </ButtonToolbar>;
       </div>
-      
           <a href="/home">
         <div className='col-xs-6 text-right'>
           <img src={homeBtn} />
         </div>
       </a>
-
     </Nav>
   </Navbar>
 );

@@ -65,16 +65,16 @@ class FormBudget extends Component {
                     <Col xs={12} md={4}>
                     
                         <FormGroup>
-                            <FormControl type="text" placeholder="Fijos" name="Fijos" value={this.state.Fijos}/>
+                            <FormControl type="text" placeholder="Fijos" name="Fijos" onChange={this.onFormChanged} value={this.state.Fijos}/>
                         </FormGroup>{' '}
                         <FormGroup>
-                            <FormControl type="text" placeholder="Restaurante" name="Restaurante" value={this.state.Restaurante}/>
+                            <FormControl type="text" placeholder="Restaurante" name="Restaurante" onChange={this.onFormChanged} value={this.state.Restaurante}/>
                         </FormGroup>{' '}
                         <FormGroup>
-                            <FormControl type="text" placeholder="Social" name="Social" value={this.state.Social}/>
+                            <FormControl type="text" placeholder="Social" name="Social"  onChange={this.onFormChanged} value={this.state.Social}/>
                         </FormGroup>
                         <FormGroup>
-                            <FormControl type="text" placeholder="Mascota" name="Mascota" value={this.state.Mascota}/>
+                            <FormControl type="text" placeholder="Mascota" name="Mascota"  onChange={this.onFormChanged} value={this.state.Mascota}/>
                         </FormGroup>
                         <FormGroup>
                             <FormControl type="text" placeholder="Regalos" name="Regalos" value={this.state.Regalos}/>
@@ -82,12 +82,12 @@ class FormBudget extends Component {
                         <FormGroup>
                             <FormControl type="text" placeholder="Apapacheo" name="Apapacheo" value={this.state.Apapacheo}/>
                         </FormGroup>
-                        {/* <FormGroup>
+                         <FormGroup>
                             <FormControl type="text" placeholder="Transporte" name="Transporte" value={this.state.Transporte}/>
                         </FormGroup>
                         <FormGroup>
                             <FormControl type="text" placeholder="Ropa" name="Ropa" value={this.state.Ropa}/>
-                        </FormGroup> */}
+                        </FormGroup> 
                         
                     </Col>
 

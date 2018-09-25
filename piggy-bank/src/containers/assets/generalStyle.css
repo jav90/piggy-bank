@@ -23,6 +23,10 @@ h2{
     
 }
 
+.home-container{
+    background: red;
+}
+
 .piguLog{
 
     display:block;

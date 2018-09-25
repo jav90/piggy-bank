@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Main from '../components/home/Main.js';
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 import HomeCarousel from "../components/home/HomeCarousel.js";
-import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+import { Col, Grid, Row, Button } from "react-bootstrap";
 import "./assets/generalStyle.css";
 // import API from "../../api/API";
 
@@ -66,17 +66,28 @@ class Home extends Component {
   render() {
     return (
       <Grid>
-      <div className="Home">
-        <div style={{marginTop:'20%'}}>
+        <Row className="home-container">
+      <Col>
+         <div >
           <h2><strong>Welcome Jose!</strong></h2>
-          <h1>Checkout is your current expenses rate!</h1>
-        </div>
-        <div style={{ width: '100%', position: 'absoulte'}}>
+          <h1>Checkout your current expenses rate!</h1>
+         </div>
+        </Col>
+       </Row>
+       <Row>
+        <Col>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
             <HomeCarousel chartData={this.state.chartData} />
           </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+        <div>
+          <Button bsStyle="warning">Pigu Tip!</Button>
         </div>
-      </div>
+        </Col>
+      </Row>
       </Grid>
     )
   }

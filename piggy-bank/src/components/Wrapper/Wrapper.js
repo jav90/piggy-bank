@@ -3,11 +3,11 @@ import "../Wrapper/Wrapper.css";
 import {Grid} from "react-bootstrap";
 
 const Wrapper = props => 
-<Grid>
+
   
-<main className="wrapper" {...props} />
+<main {...props} />
     
-</Grid>
+
 
 
 export default Wrapper;
