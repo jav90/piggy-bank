@@ -32,20 +32,32 @@ const NavBar = props => (
           id="dropdown-no-caret"
         >
         
-          
-          <MenuItem href="/profile" eventKey="1">Profile</MenuItem>
-          <MenuItem href="/tips" eventKey="2">Pigu Tips!</MenuItem>
+
+          <MenuItem>
+            <Link to="/profile">
+              Profile
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/tips">
+              Pigu Tips!
+            </Link>
+          </MenuItem>
           <MenuItem divider />
-          <MenuItem href="/login" eventKey="3">LOG OUT</MenuItem>
+          <MenuItem>
+              <Link to="/login">
+                LOG OUT
+              </Link>
+          </MenuItem>
         </DropdownButton>
-      </ButtonToolbar>;
+      </ButtonToolbar>
       </div>
       
-          <a href="/home">
+      <Link to="/home">
         <div className='col-xs-6 text-right'>
           <img src={homeBtn} />
         </div>
-      </a>
+      </Link>
 
     </Nav>
   </Navbar>
