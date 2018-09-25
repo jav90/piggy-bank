@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Main from '../components/home/Main.js';
-import piguGreen from '../components/home/assets/images/pigu-green.svg';
-import HomeCarousel from "../components/home/HomeCarousel.js";
+import Main from '../components/Home/Main.js';
+import piguGreen from '../components/Home/assets/images/pigu-green.svg';
+import HomeCarousel from "../components/Home/HomeCarousel.js";
 import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
 import "./assets/generalStyle.css";
 // import API from "../../api/API";
