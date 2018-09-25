@@ -33,11 +33,11 @@ const Ruteador=()=>{
 
 const App = () => (
 <Router>
-  <div>
+  <Switch>
     <Route exact path="/login" component={login} />
     <Route exact path="/newuser" component={RegisterNew} />
     <Route path="/" component={Ruteador}/>
-  </div>
+  </Switch>
 </Router>
 
 );
