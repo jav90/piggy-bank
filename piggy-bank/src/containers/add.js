@@ -34,7 +34,7 @@ class Add extends Component {
 
         <Row className="add">
         <Col xs={12} md={4}>
-          <Form />
+          <Form/>
           </Col>
 
         </Row>

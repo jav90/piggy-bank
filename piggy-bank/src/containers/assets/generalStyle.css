@@ -4,15 +4,7 @@
     margin-top: 50px;
     
 }
-
 h1{
-    color:#123E6D;
-    font-size: 15px;
-    font-family: 'Quicksand', sans-serif;
-    padding: 15px;
-    margin: 15px;
-}
-h2{
     color:#123E6D;
     font-size: 30px;
     font-family: 'Quicksand', sans-serif;
@@ -20,11 +12,20 @@ h2{
     margin: 15px;
     font-size: 30px;
     position: static;
-    
+}
+
+h2{
+    color:#123E6D;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 15px;
+    margin: 15px;
 }
 
 .home-container{
-    background: red;
+   margin-top: 50px;
+   margin-bottom: 50px;
+
 }
 
 .piguLog{
