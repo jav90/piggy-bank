@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import piguGreen from './assets/images/pigu-green.svg';
-import './assets/style/home.css'
+import './assets/style/home.css';
 
 
 export class Main extends Component {
@@ -14,4 +14,4 @@ export class Main extends Component {
   }
 }
 
-export default Main
+export default Main;
