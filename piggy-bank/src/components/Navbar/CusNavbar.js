@@ -27,13 +27,6 @@ const NavBar = props => (
           bsSize="small"
           title="Settings"
           noCaret
-<<<<<<< HEAD
-          id="dropdown-no-caret">
-            <MenuItem href="/profile" eventKey="1">Profile</MenuItem>
-            <MenuItem href="/tips" eventKey="2">Pigu Tips!</MenuItem>
-            <MenuItem divider />
-            <MenuItem href="/login" eventKey="3">LOG OUT</MenuItem>
-=======
           id="dropdown-no-caret"
         >
         
@@ -54,17 +47,9 @@ const NavBar = props => (
                 LOG OUT
               </Link>
           </MenuItem>
->>>>>>> master
         </DropdownButton>
       </ButtonToolbar>
       </div>
-<<<<<<< HEAD
-          <a href="/home">
-        <div className='col-xs-6 text-right'>
-          <img src={homeBtn} />
-        </div>
-      </a>
-=======
       
       <Link to="/home">
         <div className='col-xs-6 text-right'>
@@ -72,7 +57,6 @@ const NavBar = props => (
         </div>
       </Link>
 
->>>>>>> master
     </Nav>
   </Navbar>
 );

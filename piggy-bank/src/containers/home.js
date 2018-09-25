@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Main from '../components/home/Main.js';
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 import HomeCarousel from "../components/home/HomeCarousel.js";
 import { Col, Grid, Row, Button } from "react-bootstrap";

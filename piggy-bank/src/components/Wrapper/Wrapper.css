@@ -1,3 +1,4 @@
-.wrapper {
-align-content: center flex-end;
+.envolver {
+    align-content: center;
+    margin: 15px 0;
 }

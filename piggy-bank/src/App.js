@@ -14,38 +14,21 @@ import Budget from "./containers/budget";
 import Tips from "./containers/tips";
 
 const Ruteador=()=>{
-<<<<<<< HEAD
-   return (<Wrapper>
-  <NavBar />
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/home" component={Home} />
-      <Route exact path="/diary" component={Diary} />
-      <Route exact path="/add" component={Add} />
-      <Route exact path="/profile" component={Profile} />
-      <Route exact path="/budget" component={Budget} />
-      <Route exact path="/tips" component={Tips} />
-    </Switch>
-  <Footer/>
-  </Wrapper>)
-}
-=======
    return (
-    <Wrapper className= "general">
+    <Wrapper>
       <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/diary" component={Diary} />
-          <Route exact path="/add" component={Add} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/budget" component={Budget} />
-          <Route exact path="/tips" component={Tips} />
-        </Switch>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/diary" component={Diary} />
+        <Route exact path="/add" component={Add} />
+        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/budget" component={Budget} />
+        <Route exact path="/tips" component={Tips} />
+      </Switch>
       <Footer/>
     </Wrapper>
-   )};
->>>>>>> master
+  )}
 
 
 const App = () => (

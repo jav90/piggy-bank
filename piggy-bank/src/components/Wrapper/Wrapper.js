@@ -5,7 +5,7 @@ import {Grid} from "react-bootstrap";
 const Wrapper = props => 
 
   
-<main className="wrapper" {...props} />
+<envolver className = "envolver" {...props} />
     
 
 
