@@ -23,14 +23,14 @@ class Home extends Component {
 
   getChartData() {
     
-    // let data = API.getGastos()
-    // .then(gasto => {
-    //   console.log(gasto);
-    // })
-    // .catch(err => console.log(err))
-    //   console.log(this.state);
+    let data = API.getGastos()
+    .then(gasto => {
+      console.log(gasto);
+    })
+    .catch(err => console.log(err))
+      console.log(this.state);
     
-    let data = [
+    let data2 = [
       { label: "CAFE", total: 100 },
       { label: "COMIDA", total: 130 },
       { label: "GASOLINA", total: 200 },
