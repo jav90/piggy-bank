@@ -1,10 +1,11 @@
 import React from 'react';
 import '../Footer/Footer.css';
-import btnAdd from './assets/images/add-btn.svg'
-import btnBudget from './assets/images/budget-btn.svg'
-import btndiary from './assets/images/diary-btn.svg'
+import btnAdd from './assets/images/add-btn.svg';
+import btnBudget from './assets/images/budget-btn.svg';
+import btndiary from './assets/images/diary-btn.svg';
 import Navbar from "react-bootstrap/lib/Navbar";
 import Nav from "react-bootstrap/lib/Nav";
+import {Link} from "react-router-dom";
 
 const Footer = props => (
     <div>
@@ -12,21 +13,21 @@ const Footer = props => (
         <Nav
           justified
           onSelect={key => this.handleSelect(key)}>
-          <a href="/budget">
+          <Link to="/home">
             <div className="col-xs-4 text-center">
             <img src={btnBudget} />
             </div>
-          </a>
-          <a href="/add">
+          </Link>
+          <Link to="/add">
             <div className="col-xs-4 text-center">
             <img src={btnAdd} />
             </div>
-          </a>
-          <a href="/diary">
+          </Link>
+          <Link to="/diary">
             <div className="col-xs-4 text-center">
             <img src={btndiary} />
             </div>
-          </a>
+          </Link>
         </Nav>
       </Navbar>
     </div>
