@@ -24,8 +24,6 @@ const NavBar = props => (
 
       <ButtonToolbar>
         <DropdownButton
-        
-          
           bsSize="small"
           title="Settings"
           noCaret

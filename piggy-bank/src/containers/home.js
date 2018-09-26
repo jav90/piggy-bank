@@ -1,8 +1,12 @@
+//react, 
 import React, { Component } from "react";
-import Main from '../components/Home/Main.js';
-import piguGreen from '../components/Home/assets/images/pigu-green.svg';
-import HomeCarousel from "../components/Home/HomeCarousel.js";
-import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+//components and images
+import lightbulb from './assets/images/lightbulb.svg';
+import piguGreen from '../components/home/assets/images/pigu-green.svg';
+import HomeCarousel from "../components/home/HomeCarousel.js";
+
+import { Col, Grid, Row, Button} from "react-bootstrap";
 import "./assets/generalStyle.css";
 // import API from "../../api/API";
 
@@ -66,17 +70,36 @@ class Home extends Component {
   render() {
     return (
       <Grid>
-      <div className="Home">
-        <div style={{marginTop:'20%'}}>
-          <h2><strong>Welcome Jose!</strong></h2>
-          <h1>Checkout is your current expenses rate!</h1>
-        </div>
-        <div style={{ width: '100%', position: 'absoulte'}}>
+        <Row className="home-container">
+      <Col>
+         <div >
+          <h1><strong>Welcome Jose!</strong></h1>
+          <h2>Check out the summary of your expenses, now is a good moment to review where you are spending the most!</h2>
+         </div>
+        </Col>
+       </Row>
+       <Row>
+        <Col>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
-            <HomeCarousel chartData={this.state.chartData} />
+            <HomeCarousel chartData={this.state.chartData}/>
           </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+        <div>
+          <Link to="/tips">
+            <div className='col-xs-6 text-right'>
+              <img src={lightbulb} />
+            </div>
+          </Link>
+          <div className='col-xs-6 text-left'>
+              <h1><strong>Pigu Tip! </strong></h1>
+              <h2>Learn with pigu how to have a healthy relationship with finance.</h2>
+            </div>
         </div>
-      </div>
+        </Col>
+      </Row>
       </Grid>
     )
   }
