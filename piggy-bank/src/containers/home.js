@@ -31,10 +31,10 @@ class Home extends Component {
       console.log(this.state);
     
     let data2 = [
-      { label: "CAFE", total: 100 },
-      { label: "COMIDA", total: 130 },
-      { label: "GASOLINA", total: 200 },
-      { label: "RENTA", total: 800 }
+      { categoria: "CAFE", total: 100 },
+      { categoria: "COMIDA", total: 130 },
+      { categoria: "GASOLINA", total: 200 },
+      { categoria: "RENTA", total: 800 }
 
     ];
 
@@ -45,8 +45,8 @@ class Home extends Component {
 
     
     for (const catego of data) {
-      console.log(catego.label)
-      labelsArr.push(catego.label);
+      console.log(catego.categoria)
+      labelsArr.push(catego.categoria);
       totalsArr.push(catego.total);
     
     }
@@ -56,9 +56,9 @@ class Home extends Component {
 
     this.setState({
       chartData: {
-        labels: labelsArr,
+        categorias: labelsArr,
         datasets: [{
-          label: 'Gastos',
+          categoria: 'Gastos',
           data:totalsArr ,
           backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1',],
           borderColor: '#EAFCFF'
