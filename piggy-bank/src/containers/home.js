@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import lightbulb from './assets/images/lightbulb.svg';
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 import HomeCarousel from "../components/home/HomeCarousel.js";
-
+import API from '../api/API'
 import { Col, Grid, Row, Button} from "react-bootstrap";
 import "./assets/generalStyle.css";
 // import API from "../../api/API";
