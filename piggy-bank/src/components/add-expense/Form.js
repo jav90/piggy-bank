@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
 import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
 import API from "../../api/API";
@@ -50,86 +51,84 @@ handleFormSubmit()
   render() {
     return (
       <Grid>
-        <Row>
-        <Col xs={12} md={4}>
-            <form>
-          <FormGroup>
-            <Col xs={12} md={4}>
-              <InputGroup>
+         <form>
+            <Row>
+             <Col xs={12} md={4}>
+                <FormGroup>
+                <InputGroup>
                 <InputGroup.Addon>$</InputGroup.Addon>
-                <FormControl
-                 type="text" 
-                 name="cantidad"
-                 placeholder="cantidad"
-                 value={this.state.nombre}
-                 onChange={this.onFormChanged}/>
-
-                <InputGroup.Addon>.00</InputGroup.Addon>
-              </InputGroup>
-            </Col>
-          </FormGroup>
-          
-              <FormGroup controlId="formHorizontalMonto">
-                <Col componentClass={ControlLabel} sm={2}>
-                  Concepto
+                    <FormControl
+                        type="text" 
+                        name="cantidad"
+                        placeholder="cantidad"
+                        value={this.state.nombre}
+                        onChange={this.onFormChanged}/>
+                    <InputGroup.Addon>.00</InputGroup.Addon>
+                </InputGroup>
+                </FormGroup>  
                 </Col>
-                
-                  <FormControl 
-                  type="email" 
-                  placeholder="Email" 
-                  value={this.state.email}
-                  onChange={this.onFormChanged}/>
-              </FormGroup>
-
-              <FormGroup controlId="formControlsFormaPago">
-              <Col xs={12} md={4}>
-                <ControlLabel>Forma de pago</ControlLabel>
-                <FormControl 
-                componentClass="select"
-                placeholder="select"
-                value={this.state.formaPago}
-                onChange={this.onFormChanged}>
-                  
-                  <option value="other">Credit</option>
-                  <option value="other">Debit</option>
-                  <option value="other">Cash</option>
-                  
-                </FormControl>
-              </Col>
-              </FormGroup>
-
-              <FormGroup controlId="formControlsCategoria">
-              <Col xs={12} md={4}>
-                <ControlLabel>Categoria</ControlLabel>
-                <FormControl 
-                componentClass="select" 
-                placeholder="¿Selecciona la categoría"
-                value={this.state.categoria}
-                onChange={this.onFormChanged}>
-        
-                  <option value="Fijos">Fijos</option>
-                  <option value="Restaurante">Restaurante</option>
-                  <option value="coffeeshop">Coffee Shop</option>
-                  <option value="Rappyuber">Rappy & uber</option>
-                  <option value="Social">Social</option>
-                  <option value="Mascota">Mascota</option>
-                  <option value="Home">Home</option>
-                  <option value="Regalos">Regalos</option>
-                  <option value="Apapacheo">Apapacheo</option>
-                  <option value="Transporte">Transporte</option>
-                  <option value="Ropa">Ropa</option>
-                  <option value="Coffe Shop">Coffe Shop</option>
-                  <option value="Subscripciones">Subscripciones</option>
-                  <option value="Super">Super</option>
-
-                </FormControl>
+             </Row>
+             <Row>
+                 <Col xs={12} md={4}>
+                 <FormGroup>
+                    <ControlLabel>Concept</ControlLabel>
+                    <FormControl
+                        type="text" 
+                        placeholder="Where did you spend this on?" 
+                        name="Ropa" 
+                        value={this.state.Concepto}
+                        onChange={this.onFormChanged}/>
+                    </FormGroup> 
+                 </Col>
+             </Row>
+             <Row>
+                 <Col xs={12} md={4}>
+                 <FormGroup controlId="formControlsFormaPago">
+                    <ControlLabel>Forma de pago</ControlLabel>
+                    <FormControl 
+                        componentClass="select"
+                        placeholder="select"
+                        value={this.state.formaPago}
+                        onChange={this.onFormChanged}>
+                        <option value="other">Credit</option>
+                        <option value="other">Debit</option>
+                        <option value="other">Cash</option>  
+                    </FormControl>
+                    </FormGroup>
                 </Col>
-              </FormGroup>            
+             </Row>
+             <Row>
+                <Col xs={12} md={4}>
+                <FormGroup controlId="formControlsCategoria">
+                    <ControlLabel>Categoria</ControlLabel>
+                        <FormControl 
+                            componentClass="select" 
+                            placeholder="Select a category"
+                            value={this.state.categoria}
+                            onChange={this.onFormChanged}>
+                                <option value="Fijos">Fijos</option>
+                                <option value="Restaurante">Restaurante</option>
+                                <option value="coffeeshop">Coffee Shop</option>
+                                <option value="Rappyuber">Rappy & uber</option>
+                                <option value="Social">Social</option>
+                                <option value="Mascota">Mascota</option>
+                                <option value="Home">Home</option>
+                                <option value="Regalos">Regalos</option>
+                                <option value="Apapacheo">Apapacheo</option>
+                                <option value="Transporte">Transporte</option>
+                                <option value="Ropa">Ropa</option>
+                                <option value="Coffe Shop">Coffe Shop</option>
+                                <option value="Subscripciones">Subscripciones</option>
+                                <option value="Super">Super</option>
+                        </FormControl>
+                </FormGroup>            
+                </Col>
+             </Row>
             <Button bsStyle="success" onClick={() => this.handleFormSubmit()} style={{marginTop:'10%'}}>Add!</Button>
 
             </form>
-          </Col>
-        </Row>
+         
+        
       </Grid>
     )
   }
