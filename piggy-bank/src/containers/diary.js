@@ -20,14 +20,14 @@ class Diary extends React.Component {
     render(){
         return (
           <Grid>
-            <div className="wrapwrap">
-           <div className="Diary">
+            <div className="Diary">
+            <h2 className="dailyhead">Daily Expenses</h2>
             <DailyComponent day={this.state.selectedDate}/>
               <main>
                 <Calendar onDianaClick={this.onDateClick}/>
               </main>
             </div>
-            </div>
+            
           </Grid>
           );
 
