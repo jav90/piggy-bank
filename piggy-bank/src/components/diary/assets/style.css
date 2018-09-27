@@ -23,8 +23,8 @@
 /* VARIABLES */
 
 :root {
-  --main-color: #1a8fff;
-  --text-color: #777;
+  --main-color: #494949;
+  --text-color: #123E6D;
   --text-color-light: #ccc;
   --border-color: #eee;
   --bg-color: #f9f9f9;
@@ -35,13 +35,13 @@
 /* GENERAL */
 
 * {
-  box-sizing: border-box;
+  box-sizing:border-box;
 }
 
 body {
-    font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Quicksand', sans-serif;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.5;
     color: var(--text-color);
     background: var(--bg-color);
@@ -70,7 +70,7 @@ header #logo .icon {
 main {
   display: block;
   margin: 0 auto;
-  margin-top: 5em;
+  margin-top: 2em;
   max-width: 50em;
 }
 
@@ -235,8 +235,21 @@ position: relative;
 margin-top: 50px;
 }
 
-.item{
+.dailyhead{
+  margin-top: 2em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 80px;
   position: static;
-  color: rgb(12, 10, 122);
+  color: #123E6D;
+  text-shadow:  0 0px 0px rgba(0,0,0,0);
+  overflow: auto;
+}
+
+.day{
+  margin-top: 0px;
+  font-family: 'Quicksand', sans-serif;
+  position: static;
+  color: rgb(52, 52, 53);
   text-shadow:  0 0px 0px rgba(0,0,0,0);
 }
+
