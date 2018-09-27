@@ -6,7 +6,7 @@ import lightbulb from './assets/images/lightbulb.svg';
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 import HomeCarousel from "../components/home/HomeCarousel.js";
 
-import { Col, Grid, Row, Button} from "react-bootstrap";
+import { Col, Grid, Row, Image, Jumbotron, Button, ButtonToolbar, Popover,  OverlayTrigger } from "react-bootstrap";
 import "./assets/generalStyle.css";
 // import API from "../../api/API";
 
@@ -68,38 +68,59 @@ class Home extends Component {
   }
 
   render() {
+    const popoverHoverFocus = (
+      <Popover id="popover-trigger-hover-focus" title="Hello, Jose!">
+      <h2>Check out the summary of your expenses, now is a good moment to review where you are spending the most!</h2>
+      </Popover>
+    );
+
     return (
       <Grid>
+        <div className="wrapWrap">
         <Row className="home-container">
-      <Col>
-         <div >
-          <h1><strong>Welcome Jose!</strong></h1>
-          <h2>Check out the summary of your expenses, now is a good moment to review where you are spending the most!</h2>
-         </div>
+      <Col xs={12} md={12}>
+          <div className="home-title" >Welcome Jose!</div>
         </Col>
        </Row>
+       <Row><Col xs={12} md={12}>
+       <div className="chart-title"><strong>Your expenses by category</strong><br/>Click on each color to see more.</div>
+       </Col></Row>
+       <div className="btnpsst">
+            <Col xs={12} md={12}>
+            
+               <ButtonToolbar>
+                <OverlayTrigger 
+                     triger="click" 
+                    placement="bottom" 
+                    overlay={popoverHoverFocus}>
+                      <Button bsClass="psst">Psst! psst!</Button>
+                </OverlayTrigger>
+              </ButtonToolbar>
+            </Col>
+          </div>
        <Row>
-        <Col>
-          <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
+        <Col xs={12} md={12}>
+          <div className="pigu-home" style={{ backgroundImage: `url(${piguGreen})` }}>
             <HomeCarousel chartData={this.state.chartData}/>
           </div>
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col xs={12} md={12}>
         <div>
           <Link to="/tips">
-            <div className='col-xs-6 text-right'>
-              <img src={lightbulb} />
-            </div>
-          </Link>
-          <div className='col-xs-6 text-left'>
-              <h1><strong>Pigu Tip! </strong></h1>
-              <h2>Learn with pigu how to have a healthy relationship with finance.</h2>
-            </div>
+              <div className="bulb"><img src={lightbulb} /> </div>
+              <div><h3>Pigu Tip!</h3> </div>
+            </Link>
         </div>
         </Col>
       </Row>
+      <Row>
+        <Col>
+        <h2>Learn with pigu how to have a healthy relationship with finance.</h2>
+        </Col>
+      </Row>
+        </div>
       </Grid>
     )
   }

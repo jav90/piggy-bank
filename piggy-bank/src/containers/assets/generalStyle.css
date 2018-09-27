@@ -8,26 +8,85 @@ h1{
     color:#123E6D;
     font-size: 30px;
     font-family: 'Quicksand', sans-serif;
-    padding: 15px;
-    margin: 15px;
+    padding: 0;
+    margin: 10px;
     font-size: 30px;
     position: static;
+    text-align: center;
 }
 
 h2{
     color:#123E6D;
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'Quicksand', sans-serif;
-    padding: 15px;
-    margin: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    text-align: center
 }
 
+h3{
+    color:#123E6D;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    padding-top: 20px;
+}
+.icon{
+    margin:0 auto;
+    
+}
+
+/*HOME PAGE*/
 .home-container{
    margin-top: 50px;
    margin-bottom: 50px;
 
 }
 
+.home-title{
+    color:#123E6D;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 10px;
+    font-size: 30px;
+    position: static;
+    text-align: center;
+    
+}
+
+.pigu-home{
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: 13%; 
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.bulb{
+    float: left;
+    margin-right:10px;
+    
+}
+
+.chart-title{
+    /* background:rgb(14,218,135, 0.2); */
+    border-bottom: 1px solid #123E6D;
+    /* border-radius: 12px; */
+    color:#123E6D;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+
+}
+
+/*LOGIN CONTAINER*/
 .piguLog{
 
     display:block;
@@ -35,6 +94,59 @@ h2{
     margin-bottom: 10%;
     margin-left:auto;
     margin-right:auto;
+    align-content: center;
+}
+
+/*ADD CONTAINER*/
+.title-add{
+    text-align: center;
+    margin-left:30px;
+    margin-bottom:25px;
+    color:#123E6D;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0px;
+
+}
+
+/*BUDGET CONTAINER*/
+.budget-text{
+    border-left: 1px solid #123E6D;
+    margin-top: 20%;
+    
+    
+}
+
+
+/*TIP CONTAINER*/
+.wrapWrap{
+    margin-top: 60px;
+    padding: 0;
+}
+.piguTip{
+    border-bottom: 1px solid #123E6D;
+    padding-bottom: 5px;
+    margin-bottom:5px;
+    color:#123E6D;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    
+    position: static;
+}
+
+.piguYellow{
+    
+    margin-right:20px;
+    padding:0;
+    width:150px;
+    clear: left;
+
+}
+
+.tipCard{
+    background:rgb(177, 220, 255, 0.2);
+    margin-top: 10px;
+    border-radius: 25px
 }
 
 .piguRegister{

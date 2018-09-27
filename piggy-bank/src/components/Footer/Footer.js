@@ -13,7 +13,7 @@ const Footer = props => (
         <Nav
           justified
           onSelect={key => this.handleSelect(key)}>
-          <Link to="/home">
+          <Link to="/budget">
             <div className="col-xs-4 text-center">
             <img src={btnBudget} />
             </div>

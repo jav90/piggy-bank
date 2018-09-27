@@ -26,6 +26,9 @@ class Add extends Component {
     return (
 
       <Grid>
+        <div className="wrapwrap">
+
+        </div>
         <Row>
           <Col xs={12} md={4}>
             <Image src={PiguAdd} className="piguLog" />
@@ -33,20 +36,20 @@ class Add extends Component {
         </Row>
         <Row>
           <Col xs={12} md={4}>
-          <h1>Bienvenido, Soy Pigu!</h1>
+          <h1>Hello! I´m Pigu</h1>
           </Col>
         </Row>
         <Row >
           <Col xs={12} md={4}>
             <LogIn />
           </Col>
-          <Row className= "createNew"  >
+            <div className= "createNew">
           <a href="/newuser">
           <Col md={6} mdPull={6} style={{marginLeft:'50%'}}>
           <Image src={CreateNew}  />
           </Col>
           </a>
-        </Row>
+            </div>
         </Row>
       </Grid>
 

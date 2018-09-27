@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom"
 import { FormControl, FormGroup, HelpBlock, FieldGroup } from "react-bootstrap";
-import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+import { Col, Grid, Row, ControlLabel, InputGroup,Image, Button } from "react-bootstrap";
+import ticket from "./assets/ticket.svg";
 import API from "../../api/API";
+import "./assets/addExpense.css";
 
 
 
@@ -66,13 +68,13 @@ handleFormSubmit()
                     <InputGroup.Addon>.00</InputGroup.Addon>
                 </InputGroup>
                 </FormGroup>  
-                </Col>
+             </Col>
              </Row>
              <Row>
                  <Col xs={12} md={4}>
-                 <FormGroup>
-                    <ControlLabel>Concept</ControlLabel>
-                    <FormControl
+                   <FormGroup>
+                     <ControlLabel>Concept</ControlLabel>
+                      <FormControl
                         type="text" 
                         placeholder="Where did you spend this on?" 
                         name="Ropa" 
@@ -83,7 +85,7 @@ handleFormSubmit()
              </Row>
              <Row>
                  <Col xs={12} md={4}>
-                 <FormGroup controlId="formControlsFormaPago">
+                    <FormGroup controlId="formControlsFormaPago">
                     <ControlLabel>Forma de pago</ControlLabel>
                     <FormControl 
                         componentClass="select"
@@ -123,11 +125,21 @@ handleFormSubmit()
                         </FormControl>
                 </FormGroup>            
                 </Col>
-             </Row>
-            <Button bsStyle="success" onClick={() => this.handleFormSubmit()} style={{marginTop:'10%'}}>Add!</Button>
-
+             </Row>   
+            <Row>
+                <Col xs={12} md={4}>
+                <div>
+                <Image src={ticket} style={{width:'65px', alignContent:'center', marginRight:'15px'}}
+                onClick={() => this.handleFormSubmit()}
+                />
+                <Button>Add!</Button>
+                </div>
+                </Col>
+            </Row>
+                   
+            
             </form>
-         
+        
         
       </Grid>
     )
