@@ -4,12 +4,18 @@ nav.navbar.navbar-default {
 }
 
 
-.set-btn{
-  margin: 5,5,5,5;
-  position: absolute;
-  width: 35px;
-  height: 36px;
-  left: 294px;
-  top: 12px;
+.sttng{
+  
+    background:#5CD9EA;
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    border: 1px solid #5CD9EA;
+    border-radius: 5px;
+    padding:10,5,10,5;
+    margin-top:10px;
+    margin-left:5px;
+    
+
   
 }

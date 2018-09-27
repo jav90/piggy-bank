@@ -1,0 +1,56 @@
+.cardImg{
+    padding:0;
+    width:350px;
+
+
+}
+.title{
+    padding-top: 10px;
+    padding:5px;
+    color:#123E6D;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin-left:20px;
+    margin-right:20px;
+    border-bottom: 1px solid #123E6D;
+
+}
+.tipTitle{
+    background:rgb(14,218,135, 0.2);
+    padding:2px;
+    border-radius: 20px;
+    margin-top:5px;
+}
+
+.tipImg{
+    max-width: 290px;
+}
+
+h2{
+    color:#123E6D;
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card-content{
+    padding-bottom:100px;
+}
+
+.psst{
+    background:#5CD9EA;
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    border: 1px solid #5CD9EA;
+    border-radius: 5px;
+    width:100px;
+    padding:10,5,10,5;
+    margin-top:10px;
+    margin-left:5px;
+    
+}
