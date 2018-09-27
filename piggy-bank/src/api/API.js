@@ -9,7 +9,9 @@ export default {
         return axios.post(process.env.REACT_APP_API_URL + "/api/gastos/new", gasto);
     },
     postUsuario: function(usuario) {
+
         return axios.post(process.env.REACT_APP_API_URL + "/api/usuarios/", usuario);
+
     },
 
     getDaily: function() {
