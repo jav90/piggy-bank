@@ -1,8 +1,12 @@
+//react, 
 import React, { Component } from "react";
-import Main from '../components/home/Main.js';
+import { Link } from "react-router-dom";
+//components and images
+import lightbulb from './assets/images/lightbulb.svg';
 import piguGreen from '../components/home/assets/images/pigu-green.svg';
 import HomeCarousel from "../components/home/HomeCarousel.js";
-import { Col, Grid, Row, ControlLabel, InputGroup, Checkbox, Button } from "react-bootstrap";
+import API from '../api/API'
+import { Col, Grid, Row, Button} from "react-bootstrap";
 import "./assets/generalStyle.css";
 // import API from "../../api/API";
 
@@ -19,18 +23,18 @@ class Home extends Component {
 
   getChartData() {
     
-    // let data = API.getGastos()
-    // .then(gasto => {
-    //   console.log(gasto);
-    // })
-    // .catch(err => console.log(err))
-    //   console.log(this.state);
+    let data = API.getGastos()
+    .then(gasto => {
+      console.log(gasto);
+    })
+    .catch(err => console.log(err))
+      console.log(this.state);
     
-    let data = [
-      { label: "CAFE", total: 100 },
-      { label: "COMIDA", total: 130 },
-      { label: "GASOLINA", total: 200 },
-      { label: "RENTA", total: 800 }
+    let data2 = [
+      { categoria: "CAFE", total: 100 },
+      { categoria: "COMIDA", total: 130 },
+      { categoria: "GASOLINA", total: 200 },
+      { categoria: "RENTA", total: 800 }
 
     ];
 
@@ -41,8 +45,8 @@ class Home extends Component {
 
     
     for (const catego of data) {
-      console.log(catego.label)
-      labelsArr.push(catego.label);
+      console.log(catego.categoria)
+      labelsArr.push(catego.categoria);
       totalsArr.push(catego.total);
     
     }
@@ -52,9 +56,9 @@ class Home extends Component {
 
     this.setState({
       chartData: {
-        labels: labelsArr,
+        categorias: labelsArr,
         datasets: [{
-          label: 'Gastos',
+          categoria: 'Gastos',
           data:totalsArr ,
           backgroundColor: ['#E10024', '#EEA845', '#5CD9EA', '#F69BF1',],
           borderColor: '#EAFCFF'
@@ -66,16 +70,36 @@ class Home extends Component {
   render() {
     return (
       <Grid>
-      <div className="Home">
-        <div style={{marginTop:'20%'}}>
-          <h2>Bienvenido Jose!</h2>
-        </div>
-        <div style={{ width: '100%', position: 'absoulte'}}>
+        <Row className="home-container">
+      <Col>
+         <div >
+          <h1><strong>Welcome Jose!</strong></h1>
+          <h2>Check out the summary of your expenses, now is a good moment to review where you are spending the most!</h2>
+         </div>
+        </Col>
+       </Row>
+       <Row>
+        <Col>
           <div style={{ backgroundImage: `url(${piguGreen})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '13%', marginTop:'35%' }}>
-            <HomeCarousel chartData={this.state.chartData} />
+            <HomeCarousel chartData={this.state.chartData}/>
           </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+        <div>
+          <Link to="/tips">
+            <div className='col-xs-6 text-right'>
+              <img src={lightbulb} />
+            </div>
+          </Link>
+          <div className='col-xs-6 text-left'>
+              <h1><strong>Pigu Tip! </strong></h1>
+              <h2>Learn with pigu how to have a healthy relationship with finance.</h2>
+            </div>
         </div>
-      </div>
+        </Col>
+      </Row>
       </Grid>
     )
   }

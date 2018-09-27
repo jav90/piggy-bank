@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/lib/Navbar";
 import homeBtn from "./asstes/images/home-btn.svg";
 import Nav from "react-bootstrap/lib/Nav";
 import { ButtonToolbar,Glyphicon, DropdownButton,MenuItem } from "react-bootstrap";
-import settingsBtn from "./settings.js";
+
 
 
 
@@ -24,28 +24,38 @@ const NavBar = props => (
 
       <ButtonToolbar>
         <DropdownButton
-        
-          bsStyle={settingsBtn}
           bsSize="small"
           title="Settings"
           noCaret
           id="dropdown-no-caret"
         >
         
-          <MenuItem  eventKey="1">Settings</MenuItem>
-          <MenuItem href="/profile" eventKey="2">Profile</MenuItem>
-          <MenuItem eventKey="3">Pigu Tips!</MenuItem>
+
+          <MenuItem>
+            <Link to="/profile">
+              Profile
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/tips">
+              Pigu Tips!
+            </Link>
+          </MenuItem>
           <MenuItem divider />
-          <MenuItem href="/login" eventKey="4">LOG OUT</MenuItem>
+          <MenuItem>
+              <Link to="/login">
+                LOG OUT
+              </Link>
+          </MenuItem>
         </DropdownButton>
-      </ButtonToolbar>;
+      </ButtonToolbar>
       </div>
       
-          <a href="/home">
+      <Link to="/home">
         <div className='col-xs-6 text-right'>
           <img src={homeBtn} />
         </div>
-      </a>
+      </Link>
 
     </Nav>
   </Navbar>
